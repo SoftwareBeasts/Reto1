@@ -16,9 +16,21 @@ p {
 
 #estadisticas {
     position: absolute;
-    left: 77%;
+    left: 76.3%;
+    right: auto;
     background-color: black;
     padding: 15px;
+    color: white;
+}
+
+#datos {
+    float: left;
+    position: absolute;
+    left: 13%;
+    right: auto;
+    background-color: black;
+    width: 10%;
+    height: 200px;
     color: white;
 }
 
@@ -26,7 +38,7 @@ p {
     margin: 0 auto;
     background-color: black;
     width: 50%;
-    height: 34em;
+    height: 550px;
     margin-bottom: 30px;
     color: white;
     overflow: hidden;
@@ -36,7 +48,7 @@ p {
     margin: 0 auto;
     background-color: black;
     width: 50%;
-    height: 3em;
+    height: 50px;
     color: white;
     margin-bottom: 30px;
 }
