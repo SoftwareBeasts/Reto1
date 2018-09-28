@@ -1,0 +1,55 @@
+nav {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    background-color: black;
+    padding: 15px;
+    margin: 20px;
+}
+
+p {
+    color: black;
+}
+
+#estadisticas {
+    position: absolute;
+    left: 77%;
+    background-color: black;
+    padding: 15px;
+    color: white;
+}
+
+#elementoAjax {
+    margin: 0 auto;
+    background-color: black;
+    width: 50%;
+    height: 34em;
+    margin-bottom: 30px;
+    color: white;
+    overflow: hidden;
+}
+
+#esquema {
+    margin: 0 auto;
+    background-color: black;
+    width: 50%;
+    height: 3em;
+    color: white;
+    margin-bottom: 30px;
+}
+
+hr {
+    margin-top: 90px;
+}
+
+footer {
+    text-align: center;
+}
+
+#logos {
+    padding: 10px;
+    margin-bottom: 30px;
+}
