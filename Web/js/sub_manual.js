@@ -12,8 +12,6 @@ function btnAtras(ATRAS){
   return ATRAS;
 }
 function btnParar(ADELANTE,ATRAS){
-  ADELANTE= confirm("mensaje");
-  ATRAS = confirm("mensjae");
   if (ADELANTE) {
 
     ADELANTE=false;
