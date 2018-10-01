@@ -1,13 +1,36 @@
-nav {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+body {
+    background-color: #f2f0f4;
 }
 
-nav a {
-    background-color: black;
+nav {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #89B6A5;
+    width: 30%;
+    border-radius: 40px;
     padding: 15px;
-    margin: 20px;
+    text-align: center;
+}
+
+.boton,
+.boton.efectoclick {
+    margin-right: 10%;
+    padding: 5px;
+    text-align: center;
+    transition-duration: 0.4s;
+    border: none;
+    font-size: 14px;
+    background-color: #89B6A5;
+    text-transform: uppercase;
+    border: 2px hidden #89B6A5;
+    border-style: solid hidden solid hidden;
+}
+
+.boton:hover, .boton:focus, .boton.efectoclick {
+    border: 2px solid #01363F;
+    border-style: solid hidden solid hidden;
+    outline: none;
 }
 
 p {
