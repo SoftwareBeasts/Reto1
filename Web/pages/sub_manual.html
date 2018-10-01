@@ -1,3 +1,5 @@
+<!-- AWP_In_Variable Name='"WEB_1".ADELANTE' -->
+<!-- AWP_In_Variable Name='"WEB_1".ATRAS' -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,12 +10,30 @@
   </head>
   <body>
     <div class="manPrincipal">
-      <button id="manAdelante" onclick="btnAdelante()">ADELANTE</button>
-      <button id="manParar" onclick="btnParar()">PARAR</button><!--Este boton no es el boton de emergencia
+      <form method="get">
+        <button id="manAdelante"  onclick="btnAdelante()" type="submit">ADELANTE</button>
+        <button id="manParar" onclick="btnParar()" type="submit">PARAR</button><!--Este boton no es el boton de emergencia
       como tal, si no lo que hace es cambiar el estado de ADELANTE o ATRAS y
       ponerlos a false(0)-->
-      <button id="manAtras" onclick="btnAtras()">ATRAS</button>
-    </div>
+        <button id="manAtras" onclick="btnAtras()" type="submit">ATRAS</button>
+        <input id="manInAd" type="text" name="'WEB_1'.ADELANTE" />
+        <input id="manInAt" type="text" name="'WEB_1'.ATRAS" />
 
+      </form>
+    </div>
+    <script>
+      var valAdelante = :="WEB_1".ADELANTE: ;
+      var valAtras = :="WEB_1".ATRAS: ;
+
+      window.onload = function(){
+        if (valAdelante==false && valAtras==false) {
+          enable();
+        }
+        else if (valAdelante==true||valAtras==true) {
+          disable();
+        }
+      }
+
+    </script>
   </body>
 </html>
