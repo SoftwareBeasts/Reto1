@@ -1,28 +1,67 @@
+body {
+    background-color: #f2f0f4;
+    font-family: Verdana, Calibri, serif;
+}
+
 nav {
-    text-align: center;
+    margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
-}
-
-nav a {
-    background-color: black;
+    background-color: #7fc7af;
+    width: 30%;
+    border-radius: 40px;
     padding: 15px;
-    margin: 20px;
+    text-align: center;
 }
 
-p {
-    color: black;
+.boton,
+.boton.efectoclick {
+    margin-right: 10%;
+    padding: 5px;
+    text-align: center;
+    transition-duration: 0.4s;
+    border: none;
+    font-size: 14px;
+    background-color: #7fc7af;
+    text-transform: uppercase;
+    border: 2px hidden #7fc7af;
+    border-style: solid hidden solid hidden;
+}
+
+.boton:hover, .boton:focus, .boton.efectoclick {
+    border: 2px solid #3d3b3c;
+    border-style: solid hidden solid hidden;
+    outline: none;
+}
+
+.icono {
+    width: 15px;
+    height: auto;
+    margin-right: 5px;
 }
 
 #estadisticas {
     position: absolute;
     left: 76.3%;
     right: auto;
-    background-color: black;
     padding: 15px;
-    color: white;
+    border: none;
+    font-size: 14px;
+    background-color: #7fc7af;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
 }
 
+/*
+#estadisticas:hover {
+}
+*/
+#estadisticas:focus {
+    outline: none;
+}
+
+/*----Prototipado----*/
 #datos {
     float: left;
     position: absolute;
