@@ -21,3 +21,43 @@
 .botonStop {
     background-color: #f4511e;
 }
+
+@media (max-width: 450px) {
+
+    #contenedor {
+        margin: auto;
+        width: 50%;
+    }
+
+    button {
+        width:100%;
+    }
+
+    button+button {
+        margin: 50px 0;
+    }
+}
+
+@media (min-width: 450px) {
+
+    #contenedor {
+        margin: auto;
+        width: 50%;
+    }
+    button {
+        width:33.33%;
+    }
+
+    button+button {
+        margin: 0 50px;
+    }
+
+    .botonStart {
+        float: left;
+    }
+
+    .botonStop {
+        float: right;
+    }
+}
+
