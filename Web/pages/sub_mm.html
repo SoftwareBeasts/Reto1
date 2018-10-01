@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="widht=device-width, initial-scale=1">
     <title>Modo MM</title>
+    <link rel="shortcut icon" type="image/png" href="../media/favicon_software_beasts_color.png"/>
+    <script src="../js/sub_mm.js" type="text/javascript"></script>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="../css/sub-mm.css">
 </head>
 <body>
-    
+    <form method="post">
+        <button id="startflag" type="button" onclick="pruebaBoolean('startflag')">Start Flag</button>
+        <button id="posBool" type="button" onclick="pruebaBoolean('posBool')">Position</button>
+        <button id="speBool" type="button" onclick="pruebaBoolean('speBool')">Speed</button>
+        <br/>
+        <br/>
+        <label for="position" >Position</label>
+        <input id="position" type="number" placeholder="Distacia(MM)" autofocus/>
+        <label for="speed" >Speed</label>
+        <input id="speed" type="number"  placeholder="Velocidad"/>
+        <button id="stop" type="button" onclick="stop()">STOP</button>
+    </form>
+
 </body>
 </html>
