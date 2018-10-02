@@ -1,4 +1,4 @@
-button {
+button.automatico {
     padding: 15px 25px;
     font-size: 20px;
     text-align: center;
@@ -11,7 +11,7 @@ button {
     box-shadow: 0 9px #999;
 }
 
-button:active, button:hover {
+button.automatico:active, button.automatico:hover {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
     background-color: #ffb84d;
@@ -24,11 +24,11 @@ button:active, button:hover {
         width: 50%;
     }
 
-    button {
+    button.automatico {
         width:100%;
     }
 
-    button+button {
+    button.automatico+button.automatico {
         margin-top: 50px;
     }
 }
@@ -38,12 +38,12 @@ button:active, button:hover {
     #contenedor {
         margin: auto;
     }
-    button {
+    button.automatico {
         width:20%;
         float: left;
     }
 
-    button+button {
+    button.automatico+button.automatico {
         margin-left: 50px;
     }
 }
