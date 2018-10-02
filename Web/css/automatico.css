@@ -1,25 +1,19 @@
-.botonStart, .botonStop {
+button {
     padding: 15px 25px;
     font-size: 24px;
     text-align: center;
     cursor: pointer;
     outline: none;
+    background-color: #39bace;
     color: #fff;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
 }
 
-.botonStart:active, .botonStop:active {
+button:active, button:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
-.botonStart {
-    background-color: #4CAF50;
-}
-
-.botonStop {
-    background-color: #f4511e;
 }
 
 @media (max-width: 450px) {
@@ -42,22 +36,14 @@
 
     #contenedor {
         margin: auto;
-        width: 50%;
     }
     button {
-        width:33.33%;
+        width:12%;
+        float: left;
     }
 
     button+button {
         margin: 0 50px;
-    }
-
-    .botonStart {
-        float: left;
-    }
-
-    .botonStop {
-        float: right;
     }
 }
 

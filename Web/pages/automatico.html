@@ -8,8 +8,18 @@
 </head>
 <body>
 <div id="contenedor">
-        <button class="botonStart" onclick="botonStart()">Start</button>
-        <button class="botonStop" onclick="botonStop()">Stop</button>
+    <form method="post">
+        <button onclick="botonIniciar()" type="submit">Iniciar</button>
+        <button onclick="botonPaso1()" type="submit">Paso 1</button>
+        <button onclick="botonPaso2()" type="submit">Paso 2</button>
+        <button onclick="botonPaso3()" type="submit">Paso 3</button>
+        <button onclick="botonParar()" type="submit">Parar</button>
+
+        <input id="hBotonAutomatico" type="hidden" name="'WEB_1'.'BOTON AUTOMATICO'" />
+        <input id="hPaso1" type="hidden" name="'WEB_1'.PASO1" />
+        <input id="hPaso2" type="hidden" name="'WEB_1'.PASO2" />
+        <input id="hPaso3" type="hidden" name="'WEB_1'.PASO3" />
+    </form>
 </div>
 </body>
 </html>

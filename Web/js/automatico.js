@@ -1,19 +1,41 @@
-function botonStart() {
-    alert("El autómata se ha iniciado.");
-    /*var automatico=:="WEB_1"."BOTON AUTOMATICO":;
-    if (!automatico)
-    {
-        automatico=true;
-        :=WEB_1".BOTON AUTOMATICO:=automatico;
-    }*/
+function botonIniciar() {
+
+    document.getElementById("hBotonAutomatico").value="true";
+    document.getElementById("hPaso1").value="false";
+    document.getElementById("hPaso2").value="false";
+    document.getElementById("hPaso3").value="false";
 }
 
-function botonStop() {
-    alert("El autómata se ha parado.");
-    /*var automatico=:="WEB_1".BOTON AUTOMATICO:;
-    if (automatico)
+function botonPaso1() {
+    if (document.getElementById("hBotonAutomatico").value === "true")
     {
-        automatico=false;
-        :=WEB_1".BOTON AUTOMATICO:=automatico;
-    }*/
+        document.getElementById("hPaso1").value = "true";
+        document.getElementById("hPaso2").value = "false";
+        document.getElementById("hPaso3").value = "false";
+    }
+}
+
+function botonPaso2() {
+    if(document.getElementById("hBotonAutomatico").value==="true")
+    {
+        document.getElementById("hPaso1").value="false";
+        document.getElementById("hPaso2").value="true";
+        document.getElementById("hPaso3").value="false";
+    }
+}
+
+function botonPaso3() {
+    if(document.getElementById("hBotonAutomatico").value==="true")
+    {
+        document.getElementById("hPaso1").value="false";
+        document.getElementById("hPaso2").value="false";
+        document.getElementById("hPaso3").value="true";
+    }
+}
+
+function botonParar() {
+    document.getElementById("hBotonAutomatico").value="false";
+    document.getElementById("hPaso1").value="false";
+    document.getElementById("hPaso2").value="false";
+    document.getElementById("hPaso3").value="false";
 }
