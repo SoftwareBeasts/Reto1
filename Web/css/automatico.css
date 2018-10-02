@@ -1,0 +1,49 @@
+button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #39bace;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+button:active, button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+@media (max-width: 450px) {
+
+    #contenedor {
+        margin: auto;
+        width: 50%;
+    }
+
+    button {
+        width:100%;
+    }
+
+    button+button {
+        margin: 50px 0;
+    }
+}
+
+@media (min-width: 450px) {
+
+    #contenedor {
+        margin: auto;
+    }
+    button {
+        width:12%;
+        float: left;
+    }
+
+    button+button {
+        margin: 0 50px;
+    }
+}
+
