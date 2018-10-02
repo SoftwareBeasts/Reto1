@@ -22,3 +22,12 @@ function cargarManual(){
 function cargarCotas(){
 
 }
+/*$("#manual").click(function(){
+  $.ajax({
+    url:"./pages/sub_manual.html",
+    cache: true,
+    async:true,
+    dataType: "text",
+    success: (e => $("#elementoAjax").html(e))
+  });
+});*/

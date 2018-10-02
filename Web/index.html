@@ -4,9 +4,14 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/sub_manual.css"/>
+
+        <link rel="stylesheet" type="text/css" href="css/sub_mm.css"/>
         <script src="js/index.js"></script>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="js/index_jquery.js" type="text/javascript"></script>
+        <script src="js/sub_manual.js" type="text/javascript"></script>
+
+        <script src="js/sub_mm.js" type="text/javascript"></script>
         <meta charset="utf-8">
         <title>Reto 1</title>
     </head>
@@ -34,15 +39,17 @@
                 email y otras cosas</p>
         </footer>
         <script type="text/javascript">
-          $("#manual").click(function(){
-            $.ajax({
-              url:"./pages/sub_manual.html",
-              cache: true,
-              async:true,
-              dataType: "text",
-              success: (e => $("#elementoAjax").html(e))
-            });
-          });
+        $("#auto").click(function(){
+          $("#elementoAjax").load("./pages/automatico.html");
+        })
+
+        $("#manual").click(function(){
+          $("#elementoAjax").load("./pages/sub_manual.html");
+        })
+
+        $("#cotas").click(function(){
+          $("#elementoAjax").load("./pages/sub_mm.html");
+        })
         </script>
     </body>
 
