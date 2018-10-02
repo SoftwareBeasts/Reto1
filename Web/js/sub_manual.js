@@ -1,30 +1,30 @@
 
 
 
-function btnAdelante(ADELANTE){
-  ADELANTE=true;
+function disable(){
 
-  return ADELANTE;
+  document.getElementById("manAdelante").disabled=true;
+  document.getElementById("manAtras").disabled=true;
+  document.getElementById("manParar").disabled=false;
 }
-function btnAtras(ATRAS){
-  ATRAS=true;
-
-  return ATRAS;
+function enable(){
+  document.getElementById("manAdelante").disabled=false;
+  document.getElementById("manAtras").disabled=false;
+  document.getElementById("manParar").disabled=true;
 }
-function btnParar(ADELANTE,ATRAS){
-  if (ADELANTE) {
+function btnAdelante(){
 
-    ADELANTE=false;
+  document.getElementById("manInAd").value="true";
+  document.getElementById("manInAt").value="false";
 
-    return ADELANTE;
+}
+function btnAtras(){
+  document.getElementById("manInAd").value="false";
+  document.getElementById("manInAt").value="true";
+}
 
-  }
-  else if(ATRAS){
+function btnParar(){
 
-    ATRAS=false;
-
-    return ATRAS;
-
-  }
-
+  document.getElementById("manInAd").value="false";
+  document.getElementById("manInAt").value="false";
 }
