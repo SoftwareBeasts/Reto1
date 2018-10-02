@@ -37,14 +37,19 @@
                 /*Aplica la clase efectoclick para mostrar el boton como pulsado y elimina el resto*/
                 var BtnPulsado = localStorage.getItem("BtnPulsado");
                 if (BtnPulsado != null) {
-                    var elementos = document.getElementsByClassName(" sub_manual efectoclickMan");
+                    var elementos = document.getElementsByClassName(" efectoclickMan");
                     if (elementos.length != 0) {
                         for (var i = 0; i < elementos.length; i++) {
                             elementos[i].className = " sub_manual";
                         }
                     }
-                    document.getElementById(BtnPulsado).className += " efectoclickMan";
+                    document.getElementById(BtnPulsado).className = " efectoclickMan";
                 }
+            }
+            /*Para index*/
+            window.onbeforeunload = function() {
+                var modo = localStorage.getItem("Modo");
+                CambiarModo(modo, true);
             }
         </script>
     </body>
