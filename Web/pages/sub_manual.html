@@ -2,38 +2,56 @@
 <!-- AWP_In_Variable Name='"WEB_1".ATRAS' -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Manual</title>
-    <script src="../js/sub_manual.js" type="text/javascript"></script>
-    <link href="../css/sub_manual.css" type="text/css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="manPrincipal">
-      <form method="post">
-        <button id="manAdelante"  onclick="btnAdelante()" type="submit">ADELANTE</button>
-        <button id="manParar" onclick="btnParar()" type="submit">PARAR</button><!--Este boton no es el boton de emergencia
-      como tal, si no lo que hace es cambiar el estado de ADELANTE o ATRAS y
-      ponerlos a false(0)-->
-        <button id="manAtras" onclick="btnAtras()" type="submit">ATRAS</button>
-        <input id="manInAd" type="text" name="'WEB_1'.ADELANTE" />
-        <input id="manInAt" type="text" name="'WEB_1'.ATRAS" />
 
-      </form>
-    </div>
-    <script>
-      var valAdelante = :="WEB_1".ADELANTE: ;
-      var valAtras = :="WEB_1".ATRAS: ;
+    <head>
+        <meta charset="utf-8" />
+        <title>Manual</title>
+        <script src="../js/sub_manual.js" type="text/javascript"></script>
+        <link href="../css/sub_manual.css" type="text/css" rel="stylesheet" />
+    </head>
 
-      window.onload = function(){
-        if (valAdelante==false && valAtras==false) {
-          enable();
-        }
-        else if (valAdelante==true||valAtras==true) {
-          disable();
-        }
-      }
+    <body>
+        <div class="manPrincipal">
+            <form method="post" >
+                <button class="sub_manual" id="manAdelante" onclick="btnAdelante('manAdelante')" type="submit">ADELANTE</button>
+                <button class="sub_manual" id="manParar" onclick="btnParar('manParar')" type="submit">PARAR</button>
+                <!--Este boton no es el boton de emergencia, si no lo que hace es cambiar
+                el estado de ADELANTE o ATRAS y ponerlos a false(0)-->
+                <button class="sub_manual" id="manAtras" onclick="btnAtras('manAtras')" type="submit">ATRAS</button>
+                <input class="sub_manual" id="manInAd" type="text" name="'WEB_1'.ADELANTE" />
+                <input class="sub_manual" id="manInAt" type="text" name="'WEB_1'.ATRAS" />
 
-    </script>
-  </body>
+            </form>
+        </div>
+        <script>
+            /*var valAdelante =: = "WEB_1".ADELANTE: ;
+            var valAtras =: = "WEB_1".ATRAS: ;*/
+
+            window.onload = function() {
+                /*if (valAdelante == false && valAtras == false) {
+                    enable();
+                } else if (valAdelante == true || valAtras == true) {
+                    disable();
+                }*/
+
+                /*Aplica la clase efectoclick para mostrar el boton como pulsado y elimina el resto*/
+                var BtnPulsado = localStorage.getItem("BtnPulsado");
+                if (BtnPulsado != null) {
+                    var elementos = document.getElementsByClassName(" efectoclickMan");
+                    if (elementos.length != 0) {
+                        for (var i = 0; i < elementos.length; i++) {
+                            elementos[i].className = " sub_manual";
+                        }
+                    }
+                    document.getElementById(BtnPulsado).className = " efectoclickMan";
+                }
+            }
+            /*Para index*/
+            window.onbeforeunload = function() {
+                var modo = localStorage.getItem("Modo");
+                CambiarModo(modo, true);
+            }
+        </script>
+    </body>
+
 </html>
