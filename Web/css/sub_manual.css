@@ -10,3 +10,7 @@ input.sub_manual{
   visibility: hidden;
   display: none;
 }
+
+.efectoclickMan {
+    background-color: #ffb84d;
+}
