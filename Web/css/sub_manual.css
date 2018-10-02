@@ -1,4 +1,4 @@
-button{
+button.sub_manual{
   width: 200px;
   height: 100px;
   border: 1px #f2f0f4 solid;
@@ -6,7 +6,7 @@ button{
   color: #f2f0f4;
 
 }
-input{
+input.sub_manual{
   visibility: hidden;
   display: none;
 }
