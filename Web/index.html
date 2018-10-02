@@ -3,19 +3,18 @@
 
     <head>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="js/index.js"></script>
         <meta charset="utf-8">
         <title>Reto 1</title>
     </head>
 
     <body>
         <nav>
-            <a href="#">boton 1</a>
-            <a href="#">boton 2</a>
-            <a href="#">boton 3</a>
+            <button id="auto" class="boton" onclick="MantenerEfectoClick('auto')">Automático</button>
+            <button id="manual" class="boton" onclick="MantenerEfectoClick('manual')">Manual</button>
+            <button id="cotas" class="boton" style="margin-right: 0px;" onclick="MantenerEfectoClick('cotas')">Por cotas</button>
         </nav>
-        <div id="estadisticas">
-            #Estadisticas
-        </div>
+        <button id="estadisticas"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button>
         <div id="datos">
             #datos
         </div>
