@@ -1,5 +1,7 @@
 function pruebaBoolean(element) {
-    document.getElementById(element).setAttribute('disabled', '');
+    let boton = document.getElementById(element);
+    boton.setAttribute('disabled', '');
+    boton.value("1");
 }
 
 function activarB() {
@@ -9,3 +11,4 @@ function activarB() {
         elements[el].removeAttribute('disabled')
     }
 }
+
