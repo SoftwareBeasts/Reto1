@@ -1,12 +1,27 @@
-button{
-  width: 200px;
-  height: 100px;
-  border: 1px #f2f0f4 solid;
-  background-color: #01363f ;
-  color: #f2f0f4;
-
+body {
+    background-color: #f2f0f4;
+    font-family: Verdana, Calibri, serif;
 }
-input{
-  visibility: hidden;
-  display: none;
+
+.efectoclickMan {
+    width: 200px;
+    height: 100px;
+    border: 1px #f2f0f4 solid;
+    color: #f2f0f4;
+    background-color: #ffb84d;
+}
+
+button.sub_manual {
+    width: 200px;
+    height: 100px;
+    border: 1px #f2f0f4 solid;
+    background-color: #01363f;
+    color: #f2f0f4;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+input.sub_manual {
+    visibility: hidden;
+    display: none;
 }
