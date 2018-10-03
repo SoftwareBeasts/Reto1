@@ -1,4 +1,10 @@
+#contenedor {
+    margin: auto;
+}
+
 button.automatico {
+    width:100%;
+    margin-top: 50px;
     padding: 15px 25px;
     font-size: 20px;
     text-align: center;
@@ -11,40 +17,27 @@ button.automatico {
     box-shadow: 0 9px #999;
 }
 
-button.automatico:active, button.automatico:hover {
+button.automatico:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+    background-color: #ffb84d;
+}
+
+button.automatico:hover {
     background-color: #ffb84d;
 }
 
 @media (max-width: 450px) {
 
     #contenedor {
-        margin: auto;
-        width: 50%;
-    }
-
-    button.automatico {
-        width:100%;
-    }
-
-    button.automatico+button.automatico {
-        margin-top: 50px;
+        width: 90%;
     }
 }
 
 @media (min-width: 450px) {
 
     #contenedor {
-        margin: auto;
-    }
-    button.automatico {
-        width:20%;
-        float: left;
-    }
-
-    button.automatico+button.automatico {
-        margin-left: 50px;
+        width: 50%;
     }
 }
 
