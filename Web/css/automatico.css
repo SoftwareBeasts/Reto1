@@ -1,5 +1,6 @@
 #contenedor {
     margin: auto;
+    width: 50%;
 }
 
 button.automatico {
@@ -29,15 +30,11 @@ button.automatico:hover {
 
 @media (max-width: 450px) {
 
+    * {
+        box-sizing: border-box;
+    }
     #contenedor {
         width: 90%;
-    }
-}
-
-@media (min-width: 450px) {
-
-    #contenedor {
-        width: 50%;
     }
 }
 
