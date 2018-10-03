@@ -67,7 +67,7 @@ nav {
     position: absolute;
     left: 13%;
     right: auto;
-    background-color: black;
+    border: #ffb84d 2px dotted;
     width: 10%;
     height: 200px;
     color: white;
@@ -82,14 +82,43 @@ nav {
     color: white;
     overflow: hidden;
 }
-
+/*Animacion esquema*/
 #esquema {
-    margin: 0 auto;
+    margin-left: 25%;
     background-color: black;
-    width: 50%;
+    width: 5%;
     height: 50px;
     color: white;
-    margin-bottom: 30px;
+    position: relative;
+    transition: margin-left 4s;
+}
+
+#esquema.none {
+    margin-left: 25%;
+}
+
+#esquema.pos1 {
+    margin-left: 39.5%;
+}
+
+#esquema.pos2 {
+    margin-left: 54.5%;
+}
+
+#esquema.pos3 {
+    margin-left: 69.5%;
+}
+/*Fin animacion*/
+
+div#posicionesEsquema {
+    width: 50%;
+    margin: 0 auto;
+}
+
+div#posicionesEsquema label.pos2,
+div#posicionesEsquema label.pos3,
+div#posicionesEsquema label.pos4{
+    margin-left: 21%;
 }
 
 hr {
