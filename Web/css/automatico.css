@@ -1,49 +1,40 @@
-button {
+#contenedor {
+    margin: auto;
+    width: 50%;
+}
+
+button.automatico {
+    width:100%;
+    margin-top: 50px;
     padding: 15px 25px;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     cursor: pointer;
     outline: none;
-    background-color: #39bace;
+    background-color: #01313a;
     color: #fff;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
 }
 
-button:active, button:active {
+button.automatico:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+    background-color: #ffb84d;
+}
+
+button.automatico:hover {
+    background-color: #ffb84d;
 }
 
 @media (max-width: 450px) {
 
+    * {
+        box-sizing: border-box;
+    }
     #contenedor {
-        margin: auto;
-        width: 50%;
-    }
-
-    button {
-        width:100%;
-    }
-
-    button+button {
-        margin: 50px 0;
-    }
-}
-
-@media (min-width: 450px) {
-
-    #contenedor {
-        margin: auto;
-    }
-    button {
-        width:12%;
-        float: left;
-    }
-
-    button+button {
-        margin: 0 50px;
+        width: 90%;
     }
 }
 
