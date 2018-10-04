@@ -4,9 +4,7 @@ body {
 }
 
 nav {
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px auto;
     background-color: #7fc7af;
     width: 30%;
     border-radius: 40px;
@@ -20,17 +18,18 @@ nav {
     padding: 5px;
     text-align: center;
     transition-duration: 0.4s;
-    border: none;
     font-size: 14px;
     background-color: #7fc7af;
     text-transform: uppercase;
     border: 2px hidden #7fc7af;
-    border-style: solid hidden solid hidden;
+    border-top-style: solid;
+    border-bottom-style: solid;
 }
 
 .boton:hover, .boton:focus, .boton.efectoclick {
     border: 2px solid #3d3b3c;
-    border-style: solid hidden solid hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
     outline: none;
 }
 
@@ -71,6 +70,13 @@ nav {
     width: 10%;
     height: 200px;
     color: white;
+}
+
+div#datos span {
+    display: block;
+    margin-top: 10%;
+    margin-left: 4%;
+    color: black;
 }
 
 #elementoAjax {
