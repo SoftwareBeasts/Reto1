@@ -16,3 +16,26 @@ function CambiarModo(modo, recarga) {
     }
     document.getElementById(modo).className += " efectoclick";
 }
+
+function avanzar() {
+    let div = document.getElementById("esquema");
+    let pos;
+    switch (div.className) {
+        case "none":
+            pos = "pos1";
+        break;
+
+        case "pos1":
+            pos = "pos2";
+        break;
+
+        case "pos2":
+            pos = "pos3";
+        break;
+
+        default:
+            pos = "none";
+        break;
+    }
+    div.className = pos;
+}
