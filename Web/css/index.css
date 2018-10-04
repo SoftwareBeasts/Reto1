@@ -133,3 +133,32 @@ footer {
     padding: 10px;
     margin-bottom: 30px;
 }
+
+@media (max-width: 450px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 90%;
+    }
+
+    nav, #estadisticas, #elementoAjax, #esquema {
+        width: 100%;
+    }
+
+    .boton,
+    .boton.efectoclick {
+        width:100%;
+    }
+
+    #estadisticas {
+        position: static;
+        margin-bottom: 30px;
+    }
+
+    #datos, hr, footer {
+        display: none;
+    }
+}

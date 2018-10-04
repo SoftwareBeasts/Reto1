@@ -9,16 +9,14 @@
 <body>
 <div id="contenedor">
     <form method="post">
-        <button onclick="botonIniciar()" type="submit">Iniciar</button>
-        <button onclick="botonPaso1()" type="submit">Paso 1</button>
-        <button onclick="botonPaso2()" type="submit">Paso 2</button>
-        <button onclick="botonPaso3()" type="submit">Paso 3</button>
-        <button onclick="botonParar()" type="submit">Parar</button>
+        <button class="automatico" onclick="botonIniciar()" type="submit">Iniciar</button>
+        <button class="automatico" onclick="botonEmpaquetar()" type="submit">Empaquetar</button>
+        <button class="automatico" onclick="botonSellar()" type="submit">Sellar</button>
+        <button class="automatico" onclick="botonParar()" type="submit">Parar</button>
 
         <input id="hBotonAutomatico" type="hidden" name="'WEB_1'.'BOTON AUTOMATICO'" />
-        <input id="hPaso1" type="hidden" name="'WEB_1'.PASO1" />
-        <input id="hPaso2" type="hidden" name="'WEB_1'.PASO2" />
-        <input id="hPaso3" type="hidden" name="'WEB_1'.PASO3" />
+        <input id="hEmpaquetar" type="hidden" name="'WEB_1'.EMPAQUETAR" />
+        <input id="hSellar" type="hidden" name="'WEB_1'.SELLAR" />
     </form>
 </div>
 </body>
