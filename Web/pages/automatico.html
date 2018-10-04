@@ -1,25 +1,30 @@
+<!-- AWP_In_Variable Name='"WEB_1".BOTON_AUTOMATICO' -->
+<!-- AWP_In_Variable Name='"WEB_1".Empaquetar' -->
+<!-- AWP_In_Variable Name='"WEB_1".Sellar'-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/automatico.css" />
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="../js/automatico.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 </head>
 <body>
 <div id="contenedor">
-    <form method="post">
-        <button onclick="botonIniciar()" type="submit">Iniciar</button>
-        <button onclick="botonPaso1()" type="submit">Paso 1</button>
-        <button onclick="botonPaso2()" type="submit">Paso 2</button>
-        <button onclick="botonPaso3()" type="submit">Paso 3</button>
-        <button onclick="botonParar()" type="submit">Parar</button>
+    <!--<form method="post">-->
+        <button id="auto_iniciar" onclick="alternarAutomatico()" >Iniciar</button>
+    <!--    <button onclick="" >Contar</button>-->
+        <button id="auto_empaquetar" onclick="enviarSennalx('Empaquetar',true)" disabled="true" >Empaquetar</button>
+        <button id="auto_sellar" onclick="enviarSennalx('Sellar',true)" disabled="true" >Sellar</button>
+        <!--<button onclick="botonParar()" >Parar</button>-->
 
-        <input id="hBotonAutomatico" type="hidden" name="'WEB_1'.'BOTON AUTOMATICO'" />
-        <input id="hPaso1" type="hidden" name="'WEB_1'.PASO1" />
+    <!--     <input id="hBotonAutomatico" type="hidden" name="'WEB_1'.'BOTON AUTOMATICO'" />
+       <input id="hPaso1" type="hidden" name="'WEB_1'.PASO1" />
         <input id="hPaso2" type="hidden" name="'WEB_1'.PASO2" />
         <input id="hPaso3" type="hidden" name="'WEB_1'.PASO3" />
-    </form>
+    </form>-->
 </div>
 </body>
 </html>
