@@ -144,7 +144,7 @@ footer {
         width: 90%;
     }
 
-    nav, #estadisticas, #elementoAjax, #esquema {
+    nav, #estadisticas, #datos, #elementoAjax {
         width: 100%;
     }
 
@@ -153,12 +153,12 @@ footer {
         width:100%;
     }
 
-    #estadisticas {
+    #estadisticas, #datos {
         position: static;
         margin-bottom: 30px;
     }
 
-    #datos, hr, footer {
+    #esquema, #posicionesEsquema, hr, footer {
         display: none;
     }
 }
