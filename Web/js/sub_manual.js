@@ -1,3 +1,8 @@
+/*Variables Globales*/
+
+var adelanteCheck = false;
+var atrasCheck = false;
+/*Variables Globales*/
 /*
 function disable() {
     document.getElementById("manAdelante").disabled = true;
@@ -30,10 +35,10 @@ function btnParar(idBoton) {
 }
 */
 /*Los botones se quedan pulsados tras recargar la pagina*/
-function GuardarBtnPulsado(idBoton) {
+/*function GuardarBtnPulsado(idBoton) {
     localStorage.setItem("BtnPulsado", idBoton);
 }
-
+*/
 /*Esta Funcion sirve para los formularios, pero recarga la pagina aun asi*/
 /*function envioDeDatos (id){
   var datos = $('#'+id).serialize();
@@ -70,7 +75,25 @@ function enviarDatos(nomVar,val){
   console.log(!x);
 }*/
 /*Esta funcion envia un true a la variable correspondiente, y después la devuelve a false*/
-function enviarSennal(nomVar,val,currentId,otherId){
+function enviarSennal(nomVar,currentId,otherId){
+  var val = false;
+  if (nomVar=='ADELANTE') {
+    if(adelanteCheck==false){
+      val = true;
+      adelanteCheck= true;
+    }else{
+      val = false;
+      adelanteCheck = false;
+    }
+  }else if(nomVar=='ATRAS'){
+    if(atrasCheck==false){
+      val = true;
+      atrasCheck = true;
+    }else{
+      val = false;
+      atrasCheck = false;
+    }
+  }
   var datos = '\"WEB_1\".'+nomVar+"="+val;
   $($.ajax({
     method:'POST',
@@ -83,7 +106,7 @@ function enviarSennal(nomVar,val,currentId,otherId){
     }
   }))
   alterBotn(currentId,otherId);
-  var altern = '\"WEB_1\".'+nomVar+"="+!val;
+/*  var altern = '\"WEB_1\".'+nomVar+"="+!val;
   setTimeout(function(){
     $($.ajax({
       method:'POST',
@@ -95,7 +118,7 @@ function enviarSennal(nomVar,val,currentId,otherId){
         console.log("Error")
       }
     }))
-  },1000);
+  },1000);*/
 }
 
 function alterBotn(currentId,otherId){

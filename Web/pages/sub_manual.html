@@ -15,11 +15,11 @@
     <body>
         <div class="manPrincipal">
             <!--<form id="fManual" method="post" onsubmit="return envioDeDatos(this.id);">Necesita ID para enviarlo junto a la funcion,al enviar necesita retornar una funcion que siempre de false-->
-                <button class="sub_manual" id="manAdelante" onclick="enviarSennal('ADELANTE','true',this.id,'manAtras')" value="libre">ADELANTE</button>
+                <button class="sub_manual" id="manAdelante" onclick="enviarSennal('ADELANTE',this.id,'manAtras')" value="libre">ADELANTE</button>
                 <!--<button class="sub_manual" id="manParar" onclick="enviarDatos('')" >PARAR</button>-->
                 <!--Este boton no es el boton de emergencia, si no lo que hace es cambiar
                 el estado de ADELANTE o ATRAS y ponerlos a false(0)-->
-                <button class="sub_manual" id="manAtras" onclick="enviarSennal('ATRAS','true',this.id,'manAdelante') " value="libre">ATRAS</button>
+                <button class="sub_manual" id="manAtras" onclick="enviarSennal('ATRAS',this.id,'manAdelante') " value="libre">ATRAS</button>
             <!--    <input class="sub_manual" id="manInAd" type="text" name="'WEB_1'.ADELANTE" />
                 <input class="sub_manual" id="manInAt" type="text" name="'WEB_1'.ATRAS" />
 
