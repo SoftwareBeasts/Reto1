@@ -73,6 +73,13 @@ nav {
     color: white;
 }
 
+div#datos span {
+    display: block;
+    margin-top: 10%;
+    margin-left: 4%;
+    color: black;
+}
+
 #elementoAjax {
     margin: 0 auto;
     background-color: black;
