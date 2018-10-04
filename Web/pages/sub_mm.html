@@ -10,17 +10,19 @@
 </head>
 <body>
     <form method="post">
-        <button id="startflag" type="button" onclick="pruebaBoolean('startflag')">Start Flag</button>
-        <button id="posBool" type="button" onclick="pruebaBoolean('posBool')">Position</button>
-        <button id="speBool" type="button" onclick="pruebaBoolean('speBool')">Speed</button>
+        <button id="startflag" name="'WEB_1'.START_FLAG" onclick="pruebaBoolean('startflag')" type="submit" value="0">Start Flag</button>
+        <button id="posBool" name="'WEB_1'.POSITION" type="submit" onclick="pruebaBoolean('posBool')" value="0">Position</button>
+        <button id="speBool" name="'WEB_1'.SPEED" type="submit" onclick="pruebaBoolean('speBool')" value="0">Speed</button>
         <br/>
         <br/>
         <label for="position" >Position</label>
-        <input id="position" type="number" placeholder="Distacia(MM)" autofocus/>
+        <input id="position" name="'WEB_1'.POSITION_1" type="number" placeholder="Distacia(MM)" autofocus/>
         <label for="speed" >Speed</label>
-        <input id="speed" type="number"  placeholder="Velocidad"/>
+        <input id="speed" name="'WEB_1'.SPEED_1" type="number"  placeholder="Velocidad"/>
+        <br/>
+        <br/>
+        <button id="submit" type="submit">Run</button>
         <button id="stop" type="button" onclick="activarB()">STOP</button>
     </form>
-
 </body>
 </html>
