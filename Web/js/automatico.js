@@ -5,35 +5,23 @@
 /*function botonIniciar() {
 
     document.getElementById("hBotonAutomatico").value="true";
-    document.getElementById("hPaso1").value="false";
-    document.getElementById("hPaso2").value="false";
-    document.getElementById("hPaso3").value="false";
+    document.getElementById("hEmpaquetar").value="false";
+    document.getElementById("hSellar").value="false";
 }
 
-function botonPaso1() {
+function botonEmpaquetar() {
     if (document.getElementById("hBotonAutomatico").value === "true")
     {
-        document.getElementById("hPaso1").value = "true";
-        document.getElementById("hPaso2").value = "false";
-        document.getElementById("hPaso3").value = "false";
+        document.getElementById("hEmpaquetar").value = "true";
+        document.getElementById("hSellar").value = "false";
     }
 }
 
-function botonPaso2() {
+function botonSellar() {
     if(document.getElementById("hBotonAutomatico").value==="true")
     {
-        document.getElementById("hPaso1").value="false";
-        document.getElementById("hPaso2").value="true";
-        document.getElementById("hPaso3").value="false";
-    }
-}
-
-function botonPaso3() {
-    if(document.getElementById("hBotonAutomatico").value==="true")
-    {
-        document.getElementById("hPaso1").value="false";
-        document.getElementById("hPaso2").value="false";
-        document.getElementById("hPaso3").value="true";
+        document.getElementById("hEmpaquetar").value="false";
+        document.getElementById("hSellar").value="true";
     }
 }
 
