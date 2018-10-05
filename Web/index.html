@@ -21,6 +21,7 @@
         <script src="js/sub_manual.js" type="text/javascript"></script>
         <script src="js/automatico.js" type="text/javascript"></script>
         <script src="js/sub_mm.js" type="text/javascript"></script>
+        <script src="js/oncssanimationend.js" type="text/javascript"></script>
         <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png"/>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@
             <button id="cotas" class="boton" style="margin-right: 0px;" onclick="CambiarModo('cotas')">Por cotas</button>
         </nav>
 
-        <button id="estadisticas"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button>
+        <button id="estadisticas" onclick="avanzarNueva()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button>
         <!--button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png"></img></button PARA HACER QUE LA ANIMACION AVANCE-->
 
         <div id="datos">
@@ -44,7 +45,7 @@
         <div id="elementoAjax">
             #elementoAjax
         </div>
-        <div id="esquema" class="none">
+        <div id="esquema" class="0">
             #esquema
         </div>
         <div id="posicionesEsquema">
