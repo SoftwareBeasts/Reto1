@@ -5,8 +5,12 @@
 <!-- AWP_In_Variable Name='"WEB_1".SPEED_1' -->
 <!-- AWP_In_Variable Name='"WEB_1".BOTON_MM' -->
 <!-- AWP_In_Variable Name='"WEB_1".BOTON_AUTOMATICO' -->
+<!-- AWP_In_Variable Name='"WEB_1".BOTON_MANUAL' -->
 <!-- AWP_In_Variable Name='"WEB_1".Empaquetar' -->
 <!-- AWP_In_Variable Name='"WEB_1".Sellar'-->
+<!-- AWP_In_Variable Name='"WEB_1".CURRENT_POSITION'-->
+<!-- AWP_In_Variable Name='"WEB_1".CURRENT_SPEED'-->
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -60,6 +64,7 @@
                 email y otras cosas</p>
         </footer>
         <script type="text/javascript">
+        /*Este script carga las paginas en el div con id elementoAjax*/
         $("#auto").click(function(){
           if (comprobarUso()) {
             $("#elementoAjax").load("./pages/automatico.html");
@@ -86,6 +91,19 @@
             alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
           }
         })
+        /*Este script carga las paginas en el div con id elementoAjax*/
+        /*Este script actualiza las label de Posicion y Velocidad*/
+          $(function(){
+            setInterval(function(){
+              $.get("./pages/leer_posicion.html",function(currentPosition){
+                $("#posData").text(currentPosition).toString();
+              });
+              $.get("./pages/leer_velocidad.html",function(currentSpeed){
+                $("#velData").text(currentSpeed).toString();
+              })
+            },500);
+          })
+        /*Este script actualiza las label de Posicion y Velocidad*/
         </script>
     </body>
 
