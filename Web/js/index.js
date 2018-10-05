@@ -37,12 +37,11 @@ function avanzar() {
     div.className = pos;
 }
 
-<<<<<<< HEAD
 /*Guarda los datos de velocidad*/
 function GuardarDatos() {
     localStorage.setItem("Velocidad", arrayVelocidad);
 }
-=======
+
 /*function avanzarNueva() {
     console.log("ha entrado");
     debugger;
@@ -65,4 +64,3 @@ function GuardarDatos() {
         div.className = nueva;
     });
 }*/
->>>>>>> ee77ef0026405ae0773b270bae0f1e2d1d66b238
