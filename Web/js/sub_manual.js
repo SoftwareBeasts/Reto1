@@ -1,5 +1,5 @@
 /*Variables Globales*/
-
+var manualCheck = false;
 var adelanteCheck = false;
 var atrasCheck = false;
 /*Variables Globales*/
@@ -69,6 +69,34 @@ function enviarDatos(nomVar,val){
     }
   }))
 }
+/*Esto activa y desactiva el MODO MANUAL*/
+function alternarManual(){
+  if (manualCheck==false) {
+    manualCheck=true;
+    document.getElementById("manBotonMan").style.backgroundColor="#ffb84d";
+    document.getElementById("manAdelante").disabled=false;
+    document.getElementById("manAtras").disabled=false;
+    modoActivo=true;
+  }else{
+    manualCheck=false;
+    document.getElementById("manBotonMan").style.backgroundColor="#01313a";
+    document.getElementById("manAdelante").disabled=true;
+    document.getElementById("manAtras").disabled=true;
+    modoActivo=false;
+  }
+    var datos = '\"WEB_1\".BOTON_MANUAL='+manualCheck;
+    $($.ajax({
+      method:'POST',
+      data:datos,
+      success:function(datos){
+        console.log("Funciona, los datos enviados son:"+manualCheck);
+      },
+      error:function(){
+        console.log("errores");
+      }
+    }))
+}
+
 
 /*function prueba(){
   var x = true;
@@ -126,10 +154,12 @@ function alterBotn(currentId,otherId){
     document.getElementById(currentId).value='press';
     document.getElementById(currentId).style.backgroundColor='#ffb84d';
     document.getElementById(otherId).disabled=true;
+    document.getElementById("manBotonMan").disabled=true;
   }
   else if (document.getElementById(currentId).value=='press') {
     document.getElementById(currentId).value='libre';
     document.getElementById(currentId).style.backgroundColor='#01363f';
     document.getElementById(otherId).disabled=false
-  }{}
+    document.getElementById("manBotonMan").disabled=false;
+  }
 }
