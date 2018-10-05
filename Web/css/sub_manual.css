@@ -25,3 +25,19 @@ input.sub_manual {
     visibility: hidden;
     display: none;
 }
+
+@media (max-width: 450px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #manPrincipal {
+        width: 90%;
+    }
+
+    button.sub_manual {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
