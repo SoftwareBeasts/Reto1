@@ -3,7 +3,7 @@
     width: 50%;
 }
 
-button.automatico {
+#auto_iniciar, #auto_empaquetar, #auto_sellar {
     width:100%;
     margin-top: 50px;
     padding: 15px 25px;
@@ -18,14 +18,9 @@ button.automatico {
     box-shadow: 0 9px #999;
 }
 
-button.automatico:active {
+#auto_iniciar:active, #auto_empaquetar:active, #auto_sellar:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-    background-color: #ffb84d;
-}
-
-button.automatico:hover {
-    background-color: #ffb84d;
 }
 
 @media (max-width: 450px) {

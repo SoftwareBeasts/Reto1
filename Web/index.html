@@ -2,13 +2,20 @@
 <!-- AWP_In_Variable Name='"WEB_1".ATRAS' -->
 <!-- AWP_In_Variable Name='"WEB_1".contador'-->
 <!-- AWP_In_Variable Name='"WEB_1".POSITION_1' -->
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_2' -->
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_3' -->
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_4' -->
 <!-- AWP_In_Variable Name='"WEB_1".SPEED_1' -->
 <!-- AWP_In_Variable Name='"WEB_1".BOTON_MM' -->
 <!-- AWP_In_Variable Name='"WEB_1".BOTON_AUTOMATICO' -->
+<!-- AWP_In_Variable Name='"WEB_1".BOTON_MANUAL' -->
 <!-- AWP_In_Variable Name='"WEB_1".Empaquetar' -->
 <!-- AWP_In_Variable Name='"WEB_1".Sellar'-->
+<!-- AWP_In_Variable Name='"WEB_1".CURRENT_POSITION'-->
+<!-- AWP_In_Variable Name='"WEB_1".CURRENT_SPEED'-->
+
 <!DOCTYPE html>
-<html lang="es" S>
+<html lang="es">
 
     <head>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -23,8 +30,8 @@
         <script src="js/sub_mm.js" type="text/javascript"></script>
         <script src="js/oncssanimationend.js" type="text/javascript"></script>
         <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png"/>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>Reto 1</title>
     </head>
 
@@ -35,7 +42,7 @@
             <button id="cotas" class="boton" style="margin-right: 0px;" onclick="CambiarModo('cotas')">Por cotas</button>
         </nav>
 
-        <button id="estadisticas" onclick="avanzarNueva()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button>
+        <a href="pages/estadisticas.html" target="_blank"><button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button></a>
         <!--button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png"></img></button PARA HACER QUE LA ANIMACION AVANCE-->
 
         <div id="datos">
@@ -61,17 +68,49 @@
                 email y otras cosas</p>
         </footer>
         <script type="text/javascript">
+        var arrayVelocidad = [];
+        contador = 0;
+        /*Este script carga las paginas en el div con id elementoAjax*/
         $("#auto").click(function(){
-          $("#elementoAjax").load("./pages/automatico.html");
+          if (comprobarUso()) {
+            $("#elementoAjax").load("./pages/automatico.html");
+          }
+          else {
+            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+          }
         })
 
         $("#manual").click(function(){
-          $("#elementoAjax").load("./pages/sub_manual.html");
+          if (comprobarUso()) {
+            $("#elementoAjax").load("./pages/sub_manual.html");
+          }
+          else {
+            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+          }
         })
 
         $("#cotas").click(function(){
-          $("#elementoAjax").load("./pages/sub_mm.html");
+          if (comprobarUso()) {
+            $("#elementoAjax").load("./pages/sub_mm.html");
+          }
+          else {
+            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+          }
         })
+        /*Este script carga las paginas en el div con id elementoAjax*/
+        /*Este script actualiza las label de Posicion y Velocidad*/
+          $(function(){
+            setInterval(function(){
+              $.get("./pages/leer_posicion.html",function(currentPosition){
+                $("#posData").text(currentPosition).toString();
+              });
+              $.get("./pages/leer_velocidad.html",function(currentSpeed){
+                $("#velData").text(currentSpeed).toString();
+                arrayVelocidad[contador] = currentSpeed;
+              })
+            },500);
+          })
+        /*Este script actualiza las label de Posicion y Velocidad*/
         </script>
     </body>
 
