@@ -1,6 +1,11 @@
 <!-- AWP_In_Variable Name='"WEB_1".POSITION_1' -->
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_2' -->
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_3' -->
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_4' -->
 <!-- AWP_In_Variable Name='"WEB_1".SPEED_1' -->
 <!-- AWP_In_Variable Name='"WEB_1".BOTON_MM' -->
+<!-- AWP_In_Variable Name='"WEB_1".Empaquetar' -->
+<!-- AWP_In_Variable Name='"WEB_1".Sellar'-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,29 +18,17 @@
     <link type="text/css" rel="stylesheet" href="../css/sub-mm.css">
 </head>
 <body>
-    <div id="contenedor_mm">
-        <table>
-            <tr>
-                <td rowspan="4"><label for="position1" >Position</label></td>
-                <td><input id="position1" name="'WEB_1'.POSITION_1" type="number" placeholder="Distancia (mm)" autofocus/></td>
-            </tr>
-            <tr>
-                <td><input id="position2" name="'WEB_1'.POSITION_2" type="number" placeholder="Distancia (mm)" /></td>
-            </tr>
-            <tr>
-                <td><input id="position3" name="'WEB_1'.POSITION_3" type="number" placeholder="Distancia (mm)" /></td>
-            </tr>
-            <tr>
-                <td><input id="position4" name="'WEB_1'.POSITION_4" type="number" placeholder="Distancia (mm)" /></td>
-            </tr>
-            <tr>
-                <td><label for="speed" >Speed</label></td>
-                <td><input id="speed" name="'WEB_1'.SPEED_1" type="number"  placeholder="Velocidad (mm/s)"/></td>
-            </tr>
-        </table>
-        <button id="submit" name="'WEB_1'.BOTON_MM" type="button" onclick="alternarMM()">INICIAR</button>
-        <button id="mm_empaquetar" onclick="enviarSennalxx('Empaquetar',true)" disabled="true">Empaquetar</button>
-        <button id="mm_sellar" onclick="enviarSennalxx('Sellar',true)" disabled="true">Sellar</button>
-    </div>
+    <label for="position1" >Position</label>
+    <input id="position1" name="'WEB_1'.POSITION_1" type="number" placeholder="Distacia(MM)" autofocus/>
+    <input id="position2" name="'WEB_1'.POSITION_2" type="number" placeholder="Distacia(MM)" />
+    <input id="position3" name="'WEB_1'.POSITION_3" type="number" placeholder="Distacia(MM)" />
+    <input id="position4" name="'WEB_1'.POSITION_4" type="number" placeholder="Distacia(MM)" />
+    <label for="speed" >Speed</label>
+    <input id="speed" name="'WEB_1'.SPEED_1" type="number"  placeholder="Velocidad(mm/s)"/>
+    <br/>
+    <br/>
+    <button id="submit" name="'WEB_1'.BOTON_MM" type="button" onclick="alternarMM()">INICIAR</button>
+    <button id="mm_empaquetar" onclick="enviarSennalxx('Empaquetar',true)" disabled="true">Empaquetar</button>
+    <button id="mm_sellar" onclick="enviarSennalxx('Sellar',true)" disabled="true">Sellar</button>
 </body>
 </html>
