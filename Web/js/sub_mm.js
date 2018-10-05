@@ -12,3 +12,33 @@ function activarB() {
     }
 }
 
+/*ESTA FUNCION ES MUY IMPORTANTE, VOY A TOMARLA COMO BASE PARA EL RESTO DE LA LOGICA DE ESTO*/
+function enviarDatos(nomVar,val){
+    var datos = '\"WEB_1\".'+nomVar+"="+val;
+    $($.ajax({
+        method:'POST',
+        data:datos,
+        success: function(datos){
+            console.log("funciona, el valor que se ha enviado es \n"+"WEB_1."+nomVar+"="+val);
+        },
+        error: function(){
+            console.log("errores");
+        }
+    }))
+}
+
+function enviarDatos(){
+    var datos = '\"WEB_1\".'+"POSITION_1"+"="+document.getElementById("position").value+"&"+'\"WEB_1\".'+"SPEED_1"
+        +"="+document.getElementById("speed").value+"&"+'\"WEB_1\".'+"BOTON_MM"+"=true";
+    alert(datos);
+    $($.ajax({
+        method:'POST',
+        data:datos,
+        success: function(datos){
+            console.log("funciona, el valor que se ha enviado es \n"+datos);
+        },
+        error: function(){
+            console.log("errores");
+        }
+    }))
+}

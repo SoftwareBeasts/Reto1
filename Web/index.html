@@ -1,14 +1,20 @@
 <!-- AWP_In_Variable Name='"WEB_1".ADELANTE' -->
 <!-- AWP_In_Variable Name='"WEB_1".ATRAS' -->
 <!-- AWP_In_Variable Name='"WEB_1".contador'-->
+<!-- AWP_In_Variable Name='"WEB_1".POSITION_1' -->
+<!-- AWP_In_Variable Name='"WEB_1".SPEED_1' -->
+<!-- AWP_In_Variable Name='"WEB_1".BOTON_MM' -->
+<!-- AWP_In_Variable Name='"WEB_1".BOTON_AUTOMATICO' -->
+<!-- AWP_In_Variable Name='"WEB_1".Empaquetar' -->
+<!-- AWP_In_Variable Name='"WEB_1".Sellar'-->
 <!DOCTYPE html>
-<html lang="es" S>
+<html lang="es">
 
     <head>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/sub_manual.css"/>
         <link rel="stylesheet" type="text/css" href="css/automatico.css"/>
-        <link rel="stylesheet" type="text/css" href="css/sub_mm.css"/>
+        <link rel="stylesheet" type="text/css" href="css/sub-mm.css"/>
         <script src="js/index.js"></script>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="js/index_jquery.js" type="text/javascript"></script>
@@ -16,25 +22,24 @@
         <script src="js/automatico.js" type="text/javascript"></script>
         <script src="js/sub_mm.js" type="text/javascript"></script>
         <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png"/>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>Reto 1</title>
     </head>
 
     <body>
         <nav>
-            <button id="auto" class="boton" onclick="MantenerEfectoClick('auto')">Automático</button>
-            <button id="manual" class="boton" onclick="MantenerEfectoClick('manual')">Manual</button>
-            <button id="cotas" class="boton" style="margin-right: 0px;" onclick="MantenerEfectoClick('cotas')">Por cotas</button>
+            <button id="auto" class="boton" onclick="CambiarModo('auto')">Automático</button>
+            <button id="manual" class="boton" onclick="CambiarModo('manual')">Manual</button>
+            <button id="cotas" class="boton" style="margin-right: 0px;" onclick="CambiarModo('cotas')">Por cotas</button>
         </nav>
 
         <button id="estadisticas"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button>
         <!--button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png"></img></button PARA HACER QUE LA ANIMACION AVANCE-->
 
         <div id="datos">
-            <label class="dato">
-                <input name="">
-            </label>
+            <span>Posici&oacute;n: <label id="posData">0</label></span>
+            <span>Velocidad: <label id="velData">0</label></span>
         </div>
         <div id="elementoAjax">
             #elementoAjax
@@ -56,15 +61,30 @@
         </footer>
         <script type="text/javascript">
         $("#auto").click(function(){
-          $("#elementoAjax").load("./pages/automatico.html");
+          if (comprobarUso()) {
+            $("#elementoAjax").load("./pages/automatico.html");
+          }
+          else {
+            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+          }
         })
 
         $("#manual").click(function(){
-          $("#elementoAjax").load("./pages/sub_manual.html");
+          if (comprobarUso()) {
+            $("#elementoAjax").load("./pages/sub_manual.html");
+          }
+          else {
+            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+          }
         })
 
         $("#cotas").click(function(){
-          $("#elementoAjax").load("./pages/sub_mm.html");
+          if (comprobarUso()) {
+            $("#elementoAjax").load("./pages/sub_mm.html");
+          }
+          else {
+            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+          }
         })
         </script>
     </body>
