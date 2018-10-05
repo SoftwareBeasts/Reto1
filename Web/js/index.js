@@ -3,14 +3,11 @@ window.onbeforeunload = function() {
 }
 
 /*Mantiene la selección del modo en el nav y guarda el modo en el que se queda*/
-function CambiarModo(modo, recarga) {
-    if (recarga == false) {
-        localStorage.clear();
-        localStorage.setItem("Modo", elemento);
-    }
+function CambiarModo(modo) {
+    localStorage.setItem("Modo", modo);
     var modos = document.getElementsByClassName("boton efectoclick");
-    if (elementos.length != 0) {
-        for (var i = 0; i < elementos.length; i++) {
+    if (modos.length != 0) {
+        for (var i = 0; i < modos.length; i++) {
             modos[i].className = " boton";
         }
     }
@@ -23,19 +20,24 @@ function avanzar() {
     switch (div.className) {
         case "none":
             pos = "pos1";
-        break;
+            break;
 
         case "pos1":
             pos = "pos2";
-        break;
+            break;
 
         case "pos2":
             pos = "pos3";
-        break;
+            break;
 
         default:
             pos = "none";
-        break;
+            break;
     }
     div.className = pos;
+}
+
+/*Guarda los datos de velocidad*/
+function GuardarDatos() {
+    localStorage.setItem("Velocidad", arrayVelocidad);
 }
