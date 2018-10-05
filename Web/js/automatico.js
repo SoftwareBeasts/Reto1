@@ -56,11 +56,13 @@ function alternarAutomatico(){
     document.getElementById("auto_iniciar").style.backgroundColor="#ffb84d";
     document.getElementById("auto_empaquetar").disabled=false;
     document.getElementById("auto_sellar").disabled=false;
+    modoActivo=true;
   }else{
     automaticoCheck=false;
     document.getElementById("auto_iniciar").style.backgroundColor="#01313a";
     document.getElementById("auto_empaquetar").disabled=true;
     document.getElementById("auto_sellar").disabled=true;
+    modoActivo=false;
   }
   var datos = '\"WEB_1\".BOTON_AUTOMATICO='+automaticoCheck;
   $($.ajax({
