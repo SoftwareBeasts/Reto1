@@ -35,7 +35,7 @@ function enviarDatos(){
     +"&"+'\"WEB_1\".'+"POSITION_3"+"="+document.getElementById("position3").value+"&"
     +'\"WEB_1\".'+"POSITION_4"+"="+document.getElementById("position4").value+"&"+'\"WEB_1\".'+"SPEED_1"
         +"="+document.getElementById("speed").value;
-    alert(datos);
+    //alert(datos);
     $($.ajax({
         method:'POST',
         data:datos,
