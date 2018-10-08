@@ -42,15 +42,17 @@
             <button id="cotas" class="boton" style="margin-right: 0px;" onclick="CambiarModo('cotas')">Por cotas</button>
         </nav>
 
-        <a href="pages/estadisticas.html" target="_blank"><button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button></a>
+        <button id="btn_origen" onclick="volverOrigen()">ORIGEN</button>
+        <button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button>
+        <span id="estadisticasAnteriores">Todavía existen las estadísticas de la sesión anterior.</span>
         <!--button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png"></img></button PARA HACER QUE LA ANIMACION AVANCE-->
 
         <div id="datos">
-            <span>Posici&oacute;n: <label id="posData">0</label></span>
+            <span>Posici&oacute;n: <label id="posData">0</label></span><br />
             <span>Velocidad: <label id="velData">0</label></span>
         </div>
         <div id="elementoAjax">
-            #elementoAjax
+            <h1>Escoje un modo</h1>
         </div>
         <button id="btn_origen" onclick="volverOrigen()">ORIGEN</button>
         <div id="esquema" class="0">
@@ -78,7 +80,6 @@
             alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
           }
         })
-
             $("#manual").click(function() {
                 if (comprobarUso()) {
                     $("#elementoAjax").load("./pages/sub_manual.html");
