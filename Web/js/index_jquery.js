@@ -13,6 +13,8 @@ function comprobarUso(){
 cambia la variable ON_ORIGEN*/
 function volverOrigen(){
   if (comprobarUso()) {
+      var origenActivado = document.getElementById("gif");
+      origenActivado.style.display = "inline-block";
     $($.ajax({
       method:'POST',
       data:'\"WEB_1\".ON_ORIGEN=true',

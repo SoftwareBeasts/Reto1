@@ -79,6 +79,10 @@ nav {
     transform: translateY(4px);
 }
 
+#gif {
+    display: none;
+}
+
 /*----Prototipado----*/
 #datos {
     float: left;

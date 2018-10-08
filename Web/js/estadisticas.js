@@ -1,4 +1,4 @@
-document.getElementById("h3").innerHTML = "Modo: " + localStorage.getItem("ModoEstadisticas");
+document.getElementById("modoH3").innerHTML = "Modo: " + localStorage.getItem("ModoEstadisticas");
 
 /*Calcula individualmente las estadisticas para cada modo*/
 if(localStorage.getItem("Modo") == "auto"){
@@ -12,7 +12,7 @@ if(localStorage.getItem("Modo") == "auto"){
     document.getElementById("velocidadMedia").innerHTML = "Velocidad media: " + Math.trunc(velMedia) + " mm/s";
 
     /*Tiempo total*/
-    document.getElementById("tiempoTotal").innerHTML = "Tiempo total : " + localStorage.getItem("Tiempo total auto");
+    document.getElementById("tiempoTotal").innerHTML = "Tiempo total : " + localStorage.getItem("Tiempo total auto") + "s";
 } else if (localStorage.getItem("Modo") == "manual") {
     /*Velocidad media*/
     var velMedia = 0;
@@ -24,7 +24,7 @@ if(localStorage.getItem("Modo") == "auto"){
     document.getElementById("velocidadMedia").innerHTML = "Velocidad manual: " + Math.trunc(velMedia) + " mm/s";
 
     /*Tiempo total*/
-    document.getElementById("tiempoTotal").innerHTML = "Tiempo total : " + localStorage.getItem("Tiempo total manual");
+    document.getElementById("tiempoTotal").innerHTML = "Tiempo total : " + localStorage.getItem("Tiempo total manual") + "s";
 } else if (localStorage.getItem("Modo") == "cotas"){
     /*Velocidad media*/
     var velMedia = 0;
@@ -36,7 +36,7 @@ if(localStorage.getItem("Modo") == "auto"){
     document.getElementById("velocidadMedia").innerHTML = "Velocidad media: " + Math.trunc(velMedia) + " mm/s";
 
     /*Tiempo total*/
-    document.getElementById("tiempoTotal").innerHTML = "Tiempo total : " + localStorage.getItem("Tiempo total cotas");
+    document.getElementById("tiempoTotal").innerHTML = "Tiempo total : " + localStorage.getItem("Tiempo total cotas") + "s";
 }
 
 /*Dibujo del grafico*/
