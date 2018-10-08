@@ -18,7 +18,7 @@
     <link type="text/css" rel="stylesheet" href="../css/sub-mm.css">
 </head>
 <body>
-    <div id="contenedor_mm">
+    <div class="principal">
         <table>
             <tr>
                 <td rowspan="4"><label for="position1" >Position</label></td>
@@ -38,9 +38,9 @@
                 <td><input id="speed" name="'WEB_1'.SPEED_1" type="number"  placeholder="Velocidad (mm/s)"/></td>
             </tr>
         </table>
-        <button id="submit" name="'WEB_1'.BOTON_MM" type="button" onclick="alternarMM()">INICIAR</button>
-        <button id="mm_empaquetar" onclick="enviarSennalxx('Empaquetar',true)" disabled="true">Empaquetar</button>
-        <button id="mm_sellar" onclick="enviarSennalxx('Sellar',true)" disabled="true">Sellar</button>
+        <button class="botonPrincipal" name="'WEB_1'.BOTON_MM" type="button" onclick="alternarMM()">INICIAR</button>
+        <button class="botonPrincipal" onclick="enviarSennalxx('Empaquetar',true)" disabled="true">Empaquetar</button>
+        <button class="botonPrincipal" onclick="enviarSennalxx('Sellar',true)" disabled="true">Sellar</button>
     </div>
 </body>
 </html>
