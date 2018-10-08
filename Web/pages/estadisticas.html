@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/estadisticas.css">
+        <meta charset="utf-8">
+        <title>Estadisticas</title>
+    </head>
+
+    <body>
+        <div id="documento">
+            <h1>Estadísticas</h1>
+            <h3 id="h3">Modo usado: </h3>
+            Gráfico de velocidad<br />
+            <canvas id="grafico">
+                Tu navegador no soporta la etiqueta canvas de HTML5.
+            </canvas>
+        </div>
+        <script>
+            /*Para probar con datos*/
+            var array = [];
+            for (let i = 0; i < 120; i++) {
+                array[i] = i;
+                array[i++] = i - 10;
+            }
+            localStorage.setItem("Velocidad", array);
+            localStorage.setItem("Tiempo total", 120);
+
+            document.getElementById("h3").innerHTML = "Modo usado: " + localStorage.getItem("Modo");
+
+            /*Dibujo del grafico*/
+            var tiempototal = localStorage.getItem("Tiempo total");
+            var velocidad = localStorage.getItem("Velocidad").split(",");
+            var reparto = 500 / tiempototal;
+            var c = document.getElementById("grafico");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.moveTo(0, 150);
+            for (let i = 0; i < velocidad.length; i++) {
+                ctx.lineTo(i * reparto, (150 - velocidad[i]));
+            }
+            ctx.stroke();
+        </script>
+    </body>
+
+</html>
