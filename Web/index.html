@@ -29,28 +29,30 @@
         <script src="js/sub_manual.js" type="text/javascript"></script>
         <script src="js/automatico.js" type="text/javascript"></script>
         <script src="js/sub_mm.js" type="text/javascript"></script>
-        <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png"/>
-        <meta charset="utf-8"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png" />
+        <meta charset="utf-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </meta>
         <title>Reto 1</title>
     </head>
 
-    <body>
+    <body onload="leerVarPos()">
         <nav>
             <button id="auto" class="boton" onclick="CambiarModo('auto')">Automático</button>
             <button id="manual" class="boton" onclick="CambiarModo('manual')">Manual</button>
             <button id="cotas" class="boton" style="margin-right: 0px;" onclick="CambiarModo('cotas')">Por cotas</button>
         </nav>
 
-        <a href="pages/estadisticas.html" target="_blank"><button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button></a>
+        <button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button>
         <!--button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png"></img></button PARA HACER QUE LA ANIMACION AVANCE-->
 
         <div id="datos">
-            <span>Posici&oacute;n: <label id="posData">0</label></span>
+            <span>Posici&oacute;n: <label id="posData">0</label></span><br />
             <span>Velocidad: <label id="velData">0</label></span>
         </div>
         <div id="elementoAjax">
-            #elementoAjax
+            <h1>Escoje un modo</h1>
         </div>
         <button id="btn_origen" onclick="volverOrigen()">ORIGEN</button>
         <div id="esquema" class="0">
@@ -69,19 +71,14 @@
                 email y otras cosas</p>
         </footer>
         <script type="text/javascript">
-        var arrayVelocidad = [];
-        contador = 0;
-        var tiempo = 0;
-        /*Este script carga las paginas en el div con id elementoAjax*/
-        $("#auto").click(function(){
-          if (comprobarUso()) {
-            $("#elementoAjax").load("./pages/automatico.html");
-          }
-          else {
-            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
-          }
-        })
-
+            /*Este script carga las paginas en el div con id elementoAjax*/
+            $("#auto").click(function() {
+                if (comprobarUso()) {
+                    $("#elementoAjax").load("./pages/automatico.html");
+                } else {
+                    alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+                }
+            })
             $("#manual").click(function() {
                 if (comprobarUso()) {
                     $("#elementoAjax").load("./pages/sub_manual.html");
@@ -89,30 +86,16 @@
                     alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
                 }
             })
-        $("#cotas").click(function(){
-          if (comprobarUso()) {
-            $("#elementoAjax").load("./pages/sub_mm.html");
-          }
-          else {
-            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
-          }
-        })
-        /*Este script carga las paginas en el div con id elementoAjax*/
-        /*Este script actualiza las label de Posicion y Velocidad*/
-          $(function(){
-            setInterval(function(){
-              $.get("./pages/leer_posicion.html",function(currentPosition){
-                $("#posData").text(currentPosition).toString();
-              });
-              $.get("./pages/leer_velocidad.html",function(currentSpeed){
-                $("#velData").text(currentSpeed).toString();
-                arrayVelocidad[contador] = currentSpeed;
+            $("#cotas").click(function() {
+                if (comprobarUso()) {
+                    $("#elementoAjax").load("./pages/sub_mm.html");
+                } else {
+                    alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+                }
+            })
+            /*Este script carga las paginas en el div con id elementoAjax*/
 
-              });
-              tiempo = tiempo + 0.5;
-            },500);
-          })
-        /*Este script actualiza las label de Posicion y Velocidad*/
+            /*Este script actualiza las label de Posicion y Velocidad*/
         </script>
     </body>
 
