@@ -30,13 +30,6 @@ function CambiarModo(modo) {
         }
         document.getElementById(modo).className += " efectoclick";
         var estadisticasAnte = document.getElementById("estadisticasAnteriores");
-        if (localStorage.getItem("EstadisticasAuto") == "true" && localStorage.getItem("Modo") == "auto") {
-            estadisticasAnte.style.display = " block";
-        } else if (localStorage.getItem("EstadisticasManual") == "true" && localStorage.getItem("Modo") == "manual") {
-            estadisticasAnte.style.display = " block";
-        } else if (localStorage.getItem("EstadisticasCotas") == "true" && localStorage.getItem("Modo") == "cotas") {
-            estadisticasAnte.style.display = " block";
-        }
     } else {
         var modos = document.getElementsByClassName("boton efectoclick");
         for (var i = 0; i < modos.length; i++) {
@@ -76,17 +69,14 @@ function GuardarDatos() {
             localStorage.setItem("ModoEstadisticas", "Automático");
             localStorage.setItem("Velocidad auto", arrayVelocidad);
             localStorage.setItem("Tiempo total auto", tiempo);
-            localStorage.setItem("EstadisticasAuto", true);
         } else if (modo == "manual") {
             localStorage.setItem("ModoEstadisticas", "Manual");
             localStorage.setItem("Velocidad manual", arrayVelocidad);
             localStorage.setItem("Tiempo total manual", tiempo);
-            localStorage.setItem("EstadisticasManual", true);
         } else if (modo == "cotas") {
             localStorage.setItem("ModoEstadisticas", "Por cotas");
             localStorage.setItem("Velocidad cotas", arrayVelocidad);
             localStorage.setItem("Tiempo total cotas", tiempo);
-            localStorage.setItem("EstadisticasCotas", true);
         }
         window.open("pages/estadisticas.html");
     }

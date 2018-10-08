@@ -62,32 +62,23 @@ nav {
     outline: none;
 }
 
-
-#estadisticasAnteriores {
-    display: none;
+#btn_origen {
+    float: left;
     position: absolute;
-    left: 76.3%;
-    right: 15%;
-    font-size: 90%;
-    margin-top: 80px;
-}
-
-#btn_origen{
-    float:left;
-    position:absolute;
-    left:13%;
+    left: 13%;
     right: auto;
     width: 10%;
     padding: 15px;
-    border:none;
+    border: none;
     font-size: 14px;
     background-color: #7fc7af;
     border-radius: 10px;
+}
 
+#btn_origen:active {
+    transform: translateY(4px);
 }
-#btn_origen:active{
-  transform: translateY(4px);
-}
+
 /*----Prototipado----*/
 #datos {
     float: left;
@@ -95,8 +86,9 @@ nav {
     left: 13%;
     right: auto;
     border: #ffb84d 2px dotted;
-    width: 10%;
+    width: 9%;
     height: 200px;
+    padding: 10px;
 }
 
 div #datos span {
@@ -190,14 +182,13 @@ footer {
 }
 
 /* Modos (Automático, Manual y Por Cotas) */
-
 .principal {
     margin: auto;
     width: 50%;
 }
 
 .botonPrincipal {
-    width:100%;
+    width: 100%;
     border: 1px #f2f0f4 solid;
     color: #f2f0f4;
     background-color: #01363f;
@@ -212,7 +203,7 @@ footer {
 }
 
 .principal table {
-    margin:50px auto 0 auto;
+    margin: 50px auto 0 auto;
 }
 
 .principal table label {
@@ -259,7 +250,6 @@ footer {
         margin-top: 40px;
         font-size: 200%;
     }
-}
 
     .botonPrincipal {
         width: 100%;
