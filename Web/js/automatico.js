@@ -46,8 +46,8 @@ function botonParar() {
   }))
 }*/
 
-/*Deshabilitamos los botones hasta que se active el boton de automatico*/
-function enviarDatos(){
+/*Esta funcion envia los datos de los inputs a la base de datos*/
+function enviarDatosx(){
   var datos = '\"WEB_1\".'+"posizioa2"+"="+document.getElementById("position1auto").value+"&"+'\"WEB_1\".'+"posizioa1"+"="+document.getElementById("position2auto").value
   +"&"+'\"WEB_1\".'+"posizioa4"+"="+document.getElementById("position3auto").value+"&"
   +'\"WEB_1\".'+"posizioa3"+"="+document.getElementById("position4auto").value;
@@ -65,11 +65,12 @@ function enviarDatos(){
   }))
 }
 
-
+/*Esta funcion alterna los botones dependiendo de si esta activado el modo o no
+y ademas activa y desactiva el modo*/
 function alternarAutomatico(){
   if(automaticoCheck==false){
     automaticoCheck=true;
-    enviarDatos();
+    enviarDatosx();
     document.getElementById("auto_iniciar").style.backgroundColor="#ffb84d";
     document.getElementById("auto_empaquetar").disabled=false;
     document.getElementById("auto_sellar").disabled=false;
@@ -94,8 +95,8 @@ function alternarAutomatico(){
   }))
 }
 
-
-
+/*Esta funcion envia true a la variable correspondiente y despues la devuelve
+a false*/
 function enviarSennalx(nomVar,val){
   var datos = '\"WEB_1\".'+nomVar+"="+val;
   /*Enviar la señal inicial*/

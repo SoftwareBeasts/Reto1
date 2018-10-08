@@ -3,6 +3,17 @@
     width: 50%;
 }
 
+#contenedor table {
+    margin:50px auto 0 auto;
+}
+
+#contenedor table label {
+    padding-right: 20px;
+}
+
+#contenedor td input {
+    font-family: Verdana, Calibri, serif;
+}
 #auto_iniciar, #auto_empaquetar, #auto_sellar {
     width:100%;
     margin-top: 50px;
@@ -15,11 +26,11 @@
     color: #fff;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+
 }
 
 #auto_iniciar:active, #auto_empaquetar:active, #auto_sellar:active {
-    box-shadow: 0 5px #666;
+
     transform: translateY(4px);
 }
 
@@ -32,4 +43,3 @@
         width: 90%;
     }
 }
-
