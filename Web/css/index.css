@@ -62,6 +62,7 @@ nav {
     outline: none;
 }
 
+
 #estadisticasAnteriores {
     display: none;
     position: absolute;
@@ -71,6 +72,23 @@ nav {
     margin-top: 80px;
 }
 
+#btn_origen{
+    float:left;
+    position:absolute;
+    left:13%;
+    right: auto;
+    width: 10%;
+    padding: 15px;
+    border:none;
+    font-size: 14px;
+    background-color: #7fc7af;
+    border-radius: 10px;
+
+}
+#btn_origen:active{
+  transform: translateY(4px);
+}
+/*----Prototipado----*/
 #datos {
     float: left;
     position: absolute;
@@ -171,12 +189,51 @@ footer {
     margin-bottom: 30px;
 }
 
+/* Modos (Automático, Manual y Por Cotas) */
+
+.principal {
+    margin: auto;
+    width: 50%;
+}
+
+.botonPrincipal {
+    width:100%;
+    border: 1px #f2f0f4 solid;
+    color: #f2f0f4;
+    background-color: #01363f;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.principal table {
+    margin:50px auto 0 auto;
+}
+
+.principal table label {
+    color: black;
+}
+
+.principal td input {
+    font-family: Verdana, Calibri, serif;
+}
+
+.efectoclickMan {
+    background-color: #ffb84d;
+}
+
+/*  Diseño móvil */
 @media (max-width: 450px) {
     * {
         box-sizing: border-box;
     }
 
-    body {
+    body, .principal {
         width: 90%;
     }
 
@@ -184,7 +241,7 @@ footer {
         width: 100%;
     }
 
-    #datos, #esquema, #posicionesEsquema, hr {
+    #btn_origen, #datos, #esquema, #posicionesEsquema, hr {
         display: none;
     }
 
@@ -201,5 +258,11 @@ footer {
     #elementoAjax h1 {
         margin-top: 40px;
         font-size: 200%;
+    }
+}
+
+    .botonPrincipal {
+        width: 100%;
+        margin-top: 50px;
     }
 }
