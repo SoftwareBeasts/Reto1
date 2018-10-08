@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -8,7 +9,7 @@ body {
 }
 
 #documento {
-    padding: 20px;
+    padding: 40px;
     padding-top: 30px;
     margin: auto;
     border: 1.5px solid lightgrey;
@@ -21,4 +22,26 @@ body {
     width: 500px;
     height: 150px;
     border: 1px solid #d3d3d3;
+    display: block;
+}
+
+#velocidadMedia {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#tiempoTotal {
+    margin-bottom: 30px;
+    display: block;
+}
+
+#esquemaEstadisticas ul {
+    margin-left: 20px;
+    list-style: none;
+    width: 200px;
+}
+
+#esquemaEstadisticas ul li {
+    padding: 2.5px;
 }

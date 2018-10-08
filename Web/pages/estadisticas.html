@@ -10,28 +10,26 @@
     <body>
         <div id="documento">
             <h1>Estadísticas</h1>
-            <h3 id="h3">Modo: </h3>
-            Gráfico de velocidad<br />
+            <h3 id="modoH3">Modo: </h3>
+            <strong>Gráfico de velocidad</strong><br />
             <canvas id="grafico">
                 Tu navegador no soporta la etiqueta canvas de HTML5.
             </canvas>
+            (Velocidad (mm/s) / Tiempo (s))
+            <br /> <br />
+            <span id="velocidadMedia">Velocidad media: </span><br />
+            <span id="tiempoTotal">Tiempo total transcurrido en el modo: </span>
+            <div id="esquemaEstadisticas">
+                <strong>Historial de posiciones:</strong>
+                <ul>
+                    <li id="pos0">Posición 0: </li>
+                    <li id="pos1">Posición 1: </li>
+                    <li id="pos2">Posición 2: </li>
+                    <li id="pos3">Posición 3: </li>
+                </ul>
+            </div>
         </div>
-        <script>
-            document.getElementById("h3").innerHTML = "Modo: " + localStorage.getItem("Modo");
-
-            /*Dibujo del grafico*/
-            var tiempototal = localStorage.getItem("Tiempo total");
-            var velocidad = localStorage.getItem("Velocidad").split(",");
-            var reparto = 500 / tiempototal;
-            var c = document.getElementById("grafico");
-            var ctx = c.getContext("2d");
-            ctx.beginPath();
-            ctx.moveTo(0, 150);
-            for (let i = 0; i < velocidad.length; i++) {
-                ctx.lineTo(i * reparto, (150 - velocidad[i]));
-            }
-            ctx.stroke();
-        </script>
     </body>
+    <script src="../js/estadisticas.js"></script>
 
 </html>

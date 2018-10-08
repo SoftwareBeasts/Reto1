@@ -12,18 +12,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 </head>
 <body>
-<div id="contenedor">
+<div class="principal">
     <!--<form method="post">-->
-        <button id="auto_iniciar" onclick="alternarAutomatico()" >INICIAR</button>
+        <table>
+            <tr>
+                <td><label for="position1auto" >Introducir las posiciones es opcional</label></td>
+            </tr>
+            <tr>
+                <td><input id="position1auto" name="'WEB_1'.posizioa2" type="number" placeholder="Distancia (mm)" autofocus/></td>
+            </tr>
+            <tr>
+                <td><input id="position2auto" name="'WEB_1'.posizioa1" type="number" placeholder="Distancia (mm)" /></td>
+            </tr>
+            <tr>
+                <td><input id="position3auto" name="'WEB_1'.posizioa4" type="number" placeholder="Distancia (mm)" /></td>
+            </tr>
+            <tr>
+                <td><input id="position4auto" name="'WEB_1'.posizioa3" type="number" placeholder="Distancia (mm)" /></td>
+            </tr>
+        </table>
+        <button id="auto_iniciar" class="botonPrincipal" onclick="alternarAutomatico()" >INICIAR</button>
     <!--    <button onclick="" >Contar</button>-->
-        <button id="auto_empaquetar" onclick="enviarSennalx('Empaquetar',true)" disabled="true" >Empaquetar</button>
-        <button id="auto_sellar" onclick="enviarSennalx('Sellar',true)" disabled="true" >Sellar</button>
+        <button id="auto_empaquetar" class="botonPrincipal" onclick="enviarSennalx('Empaquetar',true)" disabled="true" >Empaquetar</button>
+        <button id="auto_sellar" class="botonPrincipal" onclick="enviarSennalx('Sellar',true)" disabled="true" >Sellar</button>
         <!--<button onclick="botonParar()" >Parar</button>-->
-        <label for="position1auto" >Introducir las posiciones es opcional</label>
-        <input id="position1auto" name="'WEB_1'.posizioa2" type="number" placeholder="Distacia(MM)" autofocus/>
-        <input id="position2auto" name="'WEB_1'.posizioa1" type="number" placeholder="Distacia(MM)" />
-        <input id="position3auto" name="'WEB_1'.posizioa4" type="number" placeholder="Distacia(MM)" />
-        <input id="position4auto" name="'WEB_1'.posizioa3" type="number" placeholder="Distacia(MM)" />
     <!--     <input id="hBotonAutomatico" type="hidden" name="'WEB_1'.'BOTON AUTOMATICO'" />
        <input id="hPaso1" type="hidden" name="'WEB_1'.PASO1" />
         <input id="hPaso2" type="hidden" name="'WEB_1'.PASO2" />

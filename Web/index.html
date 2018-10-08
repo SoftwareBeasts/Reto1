@@ -5,6 +5,10 @@
 <!-- AWP_In_Variable Name='"WEB_1".POSITION_2' -->
 <!-- AWP_In_Variable Name='"WEB_1".POSITION_3' -->
 <!-- AWP_In_Variable Name='"WEB_1".POSITION_4' -->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa1' -->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa2' -->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa3' -->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa4' -->
 <!-- AWP_In_Variable Name='"WEB_1".SPEED_1' -->
 <!-- AWP_In_Variable Name='"WEB_1".BOTON_MM' -->
 <!-- AWP_In_Variable Name='"WEB_1".BOTON_AUTOMATICO' -->
@@ -19,6 +23,7 @@
 <html lang="es">
 
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/sub_manual.css" />
         <link rel="stylesheet" type="text/css" href="css/automatico.css" />
@@ -28,10 +33,18 @@
         <script src="js/index_jquery.js" type="text/javascript"></script>
         <script src="js/sub_manual.js" type="text/javascript"></script>
         <script src="js/automatico.js" type="text/javascript"></script>
-        <script src="js/sub_mm.js" type="text/javascript"></script>     
+        <script src="js/sub_mm.js" type="text/javascript"></script>
+<<<<<<< HEAD
         <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png"/>
         <meta charset="utf-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+=======
+        <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png" />
+        <meta charset="utf-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </meta>
+>>>>>>> d3c2bbd320e0321dc3530969cb02ceba571a28b2
         <title>Reto 1</title>
     </head>
 
@@ -41,18 +54,19 @@
             <button id="manual" class="boton" onclick="CambiarModo('manual')">Manual</button>
             <button id="cotas" class="boton" style="margin-right: 0px;" onclick="CambiarModo('cotas')">Por cotas</button>
         </nav>
-        <button id="btn_origen" onclick="volverOrigen()">ORIGEN</button>
-        <a href="pages/estadisticas.html" target="_blank"><button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button></a>
+
+        <button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button>
         <!--button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png"></img></button PARA HACER QUE LA ANIMACION AVANCE-->
 
         <div id="datos">
-            <span>Posici&oacute;n: <label id="posData">0</label></span>
+            <span>Posici&oacute;n: <label id="posData">0</label></span><br />
             <span>Velocidad: <label id="velData">0</label></span>
         </div>
         <div id="elementoAjax">
-            #elementoAjax
+            <h1>Escoje un modo</h1>
         </div>
-        <div id="esquema" class="0">
+        <button id="btn_origen" onclick="volverOrigen()">ORIGEN</button>
+        <div id="esquema" class="none">
             #esquema
         </div>
         <div id="posicionesEsquema">
@@ -68,16 +82,14 @@
                 email y otras cosas</p>
         </footer>
         <script type="text/javascript">
-        /*Este script carga las paginas en el div con id elementoAjax*/
-        $("#auto").click(function(){
-          if (comprobarUso()) {
-            $("#elementoAjax").load("./pages/automatico.html");
-          }
-          else {
-            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
-          }
-        })
-
+            /*Este script carga las paginas en el div con id elementoAjax*/
+            $("#auto").click(function() {
+                if (comprobarUso()) {
+                    $("#elementoAjax").load("./pages/automatico.html");
+                } else {
+                    alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+                }
+            })
             $("#manual").click(function() {
                 if (comprobarUso()) {
                     $("#elementoAjax").load("./pages/sub_manual.html");
@@ -85,6 +97,7 @@
                     alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
                 }
             })
+<<<<<<< HEAD
         $("#cotas").click(function(){
           if (comprobarUso()) {
             $("#elementoAjax").load("./pages/sub_mm.html");
@@ -94,8 +107,18 @@
           }
         })
         /*Este script carga las paginas en el div con id elementoAjax*/
+=======
+            $("#cotas").click(function() {
+                if (comprobarUso()) {
+                    $("#elementoAjax").load("./pages/sub_mm.html");
+                } else {
+                    alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+                }
+            })
+            /*Este script carga las paginas en el div con id elementoAjax*/
 
-        /*Este script actualiza las label de Posicion y Velocidad*/
+            /*Este script actualiza las label de Posicion y Velocidad*/
+>>>>>>> d3c2bbd320e0321dc3530969cb02ceba571a28b2
         </script>
     </body>
 

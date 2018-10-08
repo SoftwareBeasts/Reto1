@@ -9,9 +9,12 @@ function comprobarUso(){
     return false;
   }
 }
-
+/*Esta funcion envia una señal a true, y despues de un segundo la vuelve false
+cambia la variable ON_ORIGEN*/
 function volverOrigen(){
   if (comprobarUso()) {
+      var origenActivado = document.getElementById("gif");
+      origenActivado.style.display = "inline-block";
     $($.ajax({
       method:'POST',
       data:'\"WEB_1\".ON_ORIGEN=true',
