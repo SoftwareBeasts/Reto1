@@ -39,7 +39,17 @@ function avanzar() {
 
 /*Guarda los datos de velocidad*/
 function GuardarDatos() {
+    /*Guardar modo para estadisticas*/
+    var modo = localStorage.getItem("Modo");
+    if (modo == "auto") {
+        localStorage.setItem("Modo", "Automático");
+    } else if (modo == "manual") {
+        localStorage.setItem("Modo", "Manual");
+    } else if (modo == "cotas") {
+        localStorage.setItem("Modo", "Por cotas");
+    }
     localStorage.setItem("Velocidad", arrayVelocidad);
+    localStorage.setItem("Tiempo total", tiempo);
 }
 
 /*function avanzarNueva() {
