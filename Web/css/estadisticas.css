@@ -22,3 +22,22 @@ body {
     height: 150px;
     border: 1px solid #d3d3d3;
 }
+
+@media (max-width: 450px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: auto;
+    }
+
+    #documento {
+        width: 100%;
+        height: auto;
+    }
+
+    #grafico {
+        width:100%;
+    }
+}

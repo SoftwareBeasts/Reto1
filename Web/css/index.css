@@ -194,7 +194,6 @@ footer {
     background-color: #01363f;
     border-radius: 5px;
     text-transform: uppercase;
-    margin-top: 50px;
     padding: 15px 25px;
     font-size: 24px;
     text-align: center;
@@ -202,20 +201,25 @@ footer {
     outline: none;
 }
 
-.principal table {
-    margin: 50px auto 0 auto;
+table + .botonPrincipal {
+    margin-top: 50px;
 }
 
-.principal table label {
+.botonPrincipal + .botonPrincipal {
+    margin-top: 50px;
+}
+
+.principal table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.principal label {
     color: black;
 }
 
-.principal td input {
+.principal input {
     font-family: Verdana, Calibri, serif;
-}
-
-.efectoclickMan {
-    background-color: #ffb84d;
 }
 
 /*  Diseño móvil */
@@ -228,11 +232,11 @@ footer {
         width: 90%;
     }
 
-    nav, #estadisticas, #elementoAjax, footer {
+    nav, #estadisticas, #btn_origen, #elementoAjax, footer {
         width: 100%;
     }
 
-    #btn_origen, #datos, #esquema, #posicionesEsquema, hr {
+    #datos, #esquema, #posicionesEsquema, hr {
         display: none;
     }
 
@@ -241,18 +245,17 @@ footer {
         width: 100%;
     }
 
-    #estadisticas {
+    #estadisticas, #btn_origen {
         position: static;
         margin-bottom: 30px;
     }
 
-    #elementoAjax h1 {
-        margin-top: 40px;
-        font-size: 200%;
+    #elementoAjax {
+        height: auto;
     }
 
-    .botonPrincipal {
-        width: 100%;
-        margin-top: 50px;
+    #elementoAjax h1 {
+        font-size: 250%;
+        margin: 0 auto;
     }
 }
