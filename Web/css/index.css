@@ -115,7 +115,6 @@ div #datos span {
 
 /*Animacion esquema*/
 #esquema {
-    margin-left: 25%;
     background-color: black;
     width: 5%;
     height: 50px;
@@ -162,10 +161,16 @@ div#posicionesEsquema {
     margin: 0 auto;
 }
 
+div#posicionesEsquema label.pos1,
 div#posicionesEsquema label.pos2,
 div#posicionesEsquema label.pos3,
 div#posicionesEsquema label.pos4 {
-    margin-left: 21%;
+    display: block;
+    width: 25%;
+    text-align: center;
+    padding: 0px;
+    float: left;
+
 }
 
 hr {
