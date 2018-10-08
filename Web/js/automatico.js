@@ -32,7 +32,7 @@ function botonParar() {
     document.getElementById("hPaso3").value="false";
 }*/
 /*ESTA FUNCION ES MUY IMPORTANTE, VOY A TOMARLA COMO BASE PARA EL RESTO DE LA LOGICA DE ESTO*/
-function enviarDatos(nomVar,val){
+/*function enviarDatos(nomVar,val){
   var datos = '\"WEB_1\".'+nomVar+"="+val;
   $($.ajax({
     method:'POST',
@@ -44,15 +44,32 @@ function enviarDatos(nomVar,val){
       console.log("errores");
     }
   }))
-}
+}*/
 
 /*Deshabilitamos los botones hasta que se active el boton de automatico*/
-
+function enviarDatos(){
+  var datos = '\"WEB_1\".'+"posizioa2"+"="+document.getElementById("position1auto").value+"&"+'\"WEB_1\".'+"posizioa1"+"="+document.getElementById("position2auto").value
+  +"&"+'\"WEB_1\".'+"posizioa4"+"="+document.getElementById("position3auto").value+"&"
+  +'\"WEB_1\".'+"posizioa3"+"="+document.getElementById("position4auto").value;
+  $($.ajax({
+    method:'POST',
+    data:datos,
+    success:function(){
+      console.log("Funciona, los datos enviados son "+'\"WEB_1\".'+"posizioa2"+"="+document.getElementById("position1auto").value+"&"+'\"WEB_1\".'+"posizioa1"+"="+document.getElementById("position2auto").value
+      +"&"+'\"WEB_1\".'+"posizioa4"+"="+document.getElementById("position3auto").value+"&"
+      +'\"WEB_1\".'+"posizioa3"+"="+document.getElementById("position4auto").value);
+    },
+    error:function(){
+      console.log("Errores");
+    }
+  }))
+}
 
 
 function alternarAutomatico(){
   if(automaticoCheck==false){
     automaticoCheck=true;
+    enviarDatos();
     document.getElementById("auto_iniciar").style.backgroundColor="#ffb84d";
     document.getElementById("auto_empaquetar").disabled=false;
     document.getElementById("auto_sellar").disabled=false;
