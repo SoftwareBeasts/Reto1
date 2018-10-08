@@ -66,6 +66,22 @@ nav {
     outline: none;
 }
 
+#btn_origen{
+    float:left;
+    position:absolute;
+    left:13%;
+    right: auto;
+    width: 10%;
+    padding: 15px;
+    border:none;
+    font-size: 14px;
+    background-color: #7fc7af;
+    border-radius: 10px;
+
+}
+#btn_origen:active{
+  transform: translateY(4px);
+}
 /*----Prototipado----*/
 #datos {
     float: left;
@@ -229,7 +245,6 @@ footer {
         position: static;
         margin-bottom: 30px;
     }
-
     .botonPrincipal {
         width: 100%;
         margin-top: 50px;
