@@ -3,7 +3,7 @@ var arrayVelocidad = [];
 contador = 0;
 var tiempo = 0;
 var posicion = 0;
-var posicionAnterior = 0;
+var posicionPrev = "none";
 
 /*Esta funcion lee las 8 variables de posicion para tenerlas guardadas*/
 function leerVarPos() {
@@ -115,18 +115,22 @@ setInterval(function(){
     tiempo = tiempo + 0.5;
     /*Guarda cada posicion por la que pasa la maquina*/
     posicion = document.getElementById("esquema").className;
-    if (posicion != posicionAnterior && posicionAnterior == 0){
+    if (posicion != posicionPrev && posicionPrev == "none"){
         let temp = localStorage.getItem("Posicion 0");
-        localStorage.setItem("Posicion 0", 1 + temp);
-    } else if (posicion != posicionAnterior && posicionAnterior == 1){
+        localStorage.setItem("pos0", 1 + temp);
+        posicionPrev = posicion;
+    } else if (posicion != posicionPrev && posicionPrev == "pos1"){
         let temp = localStorage.getItem("Posicion 1");
-        localStorage.setItem("Posicion 1", 1 + temp);
-    } else if (posicion != posicionAnterior && posicionAnterior == 2){
+        localStorage.setItem("pos1", 1 + temp);
+        posicionPrev = posicion;
+    } else if (posicion != posicionPrev && posicionPrev == "pos2"){
         let temp = localStorage.getItem("Posicion 2");
-        localStorage.setItem("Posicion 2", 1 + temp);
-    } else if (posicion != posicionAnterior && posicionAnterior == 3){
+        localStorage.setItem("pos2", 1 + temp);
+        posicionPrev = posicion;
+    } else if (posicion != posicionPrev && posicionPrev == "pos3"){
         let temp = localStorage.getItem("Posicion 3");
-        localStorage.setItem("Posicion 3", 1 + temp);
+        localStorage.setItem("pos3", 1 + temp);
+        posicionPrev = posicion;
     }
 },500);
 

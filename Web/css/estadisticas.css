@@ -30,3 +30,18 @@ body {
     margin-top: 30px;
     margin-bottom: 10px;
 }
+
+#tiempoTotal {
+    margin-bottom: 30px;
+    display: block;
+}
+
+#esquemaEstadisticas ul {
+    margin-left: 20px;
+    list-style: none;
+    width: 200px;
+}
+
+#esquemaEstadisticas ul li {
+    padding: 2.5px;
+}
