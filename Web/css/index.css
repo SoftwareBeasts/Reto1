@@ -183,6 +183,36 @@ hr {
 
 footer {
     text-align: center;
+    text-decoration: none;
+}
+
+footer p a {
+    margin-top: 1%;
+    color: black;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+footer p a:visited {
+    color: black;
+}
+
+footer p a img {
+    padding: 1%;
+}
+
+footer p#sbl {
+    width: 256px;
+    height: 144px;
+    margin: 0 auto;
+}
+
+footer p#sbl img {
+    width: 100%;
+    height: auto;
 }
 
 #logos {
