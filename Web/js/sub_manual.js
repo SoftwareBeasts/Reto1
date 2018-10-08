@@ -56,7 +56,7 @@ function btnParar(idBoton) {
   return false;
 }*/
 /*ESTA FUNCION ES MUY IMPORTANTE, VOY A TOMARLA COMO BASE PARA EL RESTO DE LA LOGICA DE ESTO*/
-function enviarDatos(nomVar,val){
+/*function enviarDatos(nomVar,val){
   var datos = '\"WEB_1\".'+nomVar+"="+val;
   $($.ajax({
     method:'POST',
@@ -68,8 +68,10 @@ function enviarDatos(nomVar,val){
       console.log("errores");
     }
   }))
-}
-/*Esto activa y desactiva el MODO MANUAL*/
+}*/
+
+
+/*Esta function activa y desactiva el MODO MANUAL*/
 function alternarManual(){
   if (manualCheck==false) {
     manualCheck=true;
@@ -98,11 +100,9 @@ function alternarManual(){
 }
 
 
-/*function prueba(){
-  var x = true;
-  console.log(!x);
-}*/
-/*Esta funcion envia un true a la variable correspondiente, y después la devuelve a false*/
+
+/*Esta funcion envia un true a la variable correspondiente
+y se queda pulsada, si se clicka de nuevo, se pone en false*/
 function enviarSennal(nomVar,currentId,otherId){
   var val = false;
   if (nomVar=='ADELANTE') {
@@ -134,21 +134,9 @@ function enviarSennal(nomVar,currentId,otherId){
     }
   }))
   alterBotn(currentId,otherId);
-/*  var altern = '\"WEB_1\".'+nomVar+"="+!val;
-  setTimeout(function(){
-    $($.ajax({
-      method:'POST',
-      data:altern,
-      success: function(altern){
-        console.log("Exito");
-      },
-      error: function(){
-        console.log("Error")
-      }
-    }))
-  },1000);*/
 }
 
+/*Esta funcion alterna el estado de los botones entre activado y desactivado*/
 function alterBotn(currentId,otherId){
   if (document.getElementById(currentId).value=='libre') {
     document.getElementById(currentId).value='press';
