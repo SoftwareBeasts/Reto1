@@ -20,16 +20,15 @@
 
     <head>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/sub_manual.css"/>
-        <link rel="stylesheet" type="text/css" href="css/automatico.css"/>
-        <link rel="stylesheet" type="text/css" href="css/sub-mm.css"/>
+        <link rel="stylesheet" type="text/css" href="css/sub_manual.css" />
+        <link rel="stylesheet" type="text/css" href="css/automatico.css" />
+        <link rel="stylesheet" type="text/css" href="css/sub-mm.css" />
         <script src="js/index.js"></script>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="js/index_jquery.js" type="text/javascript"></script>
         <script src="js/sub_manual.js" type="text/javascript"></script>
         <script src="js/automatico.js" type="text/javascript"></script>
-        <script src="js/sub_mm.js" type="text/javascript"></script>
-      
+        <script src="js/sub_mm.js" type="text/javascript"></script>     
         <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png"/>
         <meta charset="utf-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
@@ -82,15 +81,13 @@
           }
         })
 
-        $("#manual").click(function(){
-          if (comprobarUso()) {
-            $("#elementoAjax").load("./pages/sub_manual.html");
-          }
-          else {
-            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
-          }
-        })
-
+            $("#manual").click(function() {
+                if (comprobarUso()) {
+                    $("#elementoAjax").load("./pages/sub_manual.html");
+                } else {
+                    alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+                }
+            })
         $("#cotas").click(function(){
           if (comprobarUso()) {
             $("#elementoAjax").load("./pages/sub_mm.html");
