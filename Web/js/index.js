@@ -16,19 +16,26 @@ function leerVarPos() {
 }
 
 window.onbeforeunload = function() {
+    localStorage.clear();
     return "";
 }
 
 /*Mantiene la selección del modo en el nav y guarda el modo en el que se queda*/
 function CambiarModo(modo) {
-    localStorage.setItem("Modo", modo);
-    var modos = document.getElementsByClassName("boton efectoclick");
-    if (modos.length != 0) {
+    if (comprobarUso()){
+        localStorage.setItem("Modo", modo);
+        var modos = document.getElementsByClassName("boton efectoclick");
         for (var i = 0; i < modos.length; i++) {
             modos[i].className = " boton";
         }
+        document.getElementById(modo).className += " efectoclick";
+        var estadisticasAnte = document.getElementById("estadisticasAnteriores");
+    } else {
+        var modos = document.getElementsByClassName("boton efectoclick");
+        for (var i = 0; i < modos.length; i++) {
+            modos[i].focus();
+        }
     }
-    document.getElementById(modo).className += " efectoclick";
 }
 
 function avanzar() {
@@ -54,19 +61,29 @@ function avanzar() {
     div.className = pos;
 }
 
-/*Guarda los datos de velocidad*/
+/*Guarda datos necesarios para estadisticas*/
 function GuardarDatos() {
-    /*Guardar modo para estadisticas*/
-    var modo = localStorage.getItem("Modo");
-    if (modo == "auto") {
-        localStorage.setItem("Modo", "Automático");
-    } else if (modo == "manual") {
-        localStorage.setItem("Modo", "Manual");
-    } else if (modo == "cotas") {
-        localStorage.setItem("Modo", "Por cotas");
+    if (comprobarUso()){
+        var modo = localStorage.getItem("Modo");
+        if (modo == "auto") {
+            localStorage.setItem("ModoEstadisticas", "Automático");
+            localStorage.setItem("Velocidad auto", arrayVelocidad);
+            localStorage.setItem("Tiempo total auto", tiempo);
+        } else if (modo == "manual") {
+            localStorage.setItem("ModoEstadisticas", "Manual");
+            localStorage.setItem("Velocidad manual", arrayVelocidad);
+            localStorage.setItem("Tiempo total manual", tiempo);
+        } else if (modo == "cotas") {
+            localStorage.setItem("ModoEstadisticas", "Por cotas");
+            localStorage.setItem("Velocidad cotas", arrayVelocidad);
+            localStorage.setItem("Tiempo total cotas", tiempo);
+        }
+        window.open("pages/estadisticas.html");
     }
-    localStorage.setItem("Velocidad", arrayVelocidad);
-    localStorage.setItem("Tiempo total", tiempo);
+    /**/
+    if(comprobarUso()){
+        tiempo = tiempo + 0.5;
+    }
 }
 
 /*Este intervalo recoge cada 0.5 segundos la posición y la velocidad actuales, también sirve para la animación*/
