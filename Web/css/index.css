@@ -83,6 +83,7 @@ div#datos span {
     margin-top: 10%;
     margin-left: 4%;
     color: black;
+    word-wrap: break-word;
 }
 
 #elementoAjax {
@@ -173,8 +174,12 @@ footer {
         width: 90%;
     }
 
-    nav, #estadisticas, #datos, #elementoAjax {
+    nav, #estadisticas, #elementoAjax, footer {
         width: 100%;
+    }
+
+    #datos, #esquema, #posicionesEsquema, hr {
+        display: none;
     }
 
     .boton,
@@ -182,12 +187,8 @@ footer {
         width:100%;
     }
 
-    #estadisticas, #datos {
+    #estadisticas {
         position: static;
         margin-bottom: 30px;
-    }
-
-    #esquema, #posicionesEsquema, hr, footer {
-        display: none;
     }
 }
