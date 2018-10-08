@@ -2,7 +2,10 @@ body {
     background-color: #f2f0f4;
     font-family: Verdana, Calibri, serif;
 }
-
+#manPrincipal{
+  margin: auto;
+  width: 50%;
+}
 .efectoclickMan {
     width: 200px;
     height: 100px;
@@ -11,19 +14,22 @@ body {
     background-color: #ffb84d;
 }
 
-button.sub_manual {
-    width: 200px;
-    height: 100px;
-    border: 1px #f2f0f4 solid;
-    background-color: #01363f;
-    color: #f2f0f4;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
+#manBotonMan , #manAdelante , #manAtras {
+    width:100%;
+    margin-top: 50px;
+    padding: 15px 25px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #01313a;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
 
-input.sub_manual {
-    visibility: hidden;
-    display: none;
+}
+#manBotonMan:active , #manAdelante:active , #manAtras:active{
+    transform: translateY(4px);
 }
 
 @media (max-width: 450px) {
