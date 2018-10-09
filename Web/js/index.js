@@ -50,7 +50,6 @@ function CambiarModo(modo) {
             modos[i].className = " boton";
         }
         document.getElementById(modo).className += " efectoclick";
-        var estadisticasAnte = document.getElementById("estadisticasAnteriores");
         tiempo = 0;
     } else {
         var modos = document.getElementsByClassName("boton efectoclick");
@@ -138,7 +137,7 @@ setInterval(function(){
     if (comprobarUso() == false) {
         tiempo = tiempo + 0.5;
     }
-    
+
     /*Guarda cada posicion por la que pasa la maquina*/
     posicion = document.getElementById("esquema").className;
     if (posicion != posicionPrev && posicionPrev == "none"){
