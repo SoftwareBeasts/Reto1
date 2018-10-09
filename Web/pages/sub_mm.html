@@ -21,21 +21,29 @@
     <div class="principal">
         <table>
             <tr>
-                <td rowspan="4"><label for="position1" >Position</label></td>
+                <th colspan="2"><label for="position1" >Posición</label></th>
+            </tr>
+            <tr>
+                <th><label for="position1">Posición 1</label></th>
                 <td><input id="position1" name="'WEB_1'.POSITION_1" type="number" placeholder="Distancia (mm)" autofocus/></td>
             </tr>
             <tr>
+                <th><label for="position2">Posición 2</label></th>
                 <td><input id="position2" name="'WEB_1'.POSITION_2" type="number" placeholder="Distancia (mm)" /></td>
             </tr>
             <tr>
+                <th><label for="position3">Posición 3</label></th>
                 <td><input id="position3" name="'WEB_1'.POSITION_3" type="number" placeholder="Distancia (mm)" /></td>
             </tr>
             <tr>
+                <th><label for="position4">Posición 4</label></th>
                 <td><input id="position4" name="'WEB_1'.POSITION_4" type="number" placeholder="Distancia (mm)" /></td>
             </tr>
             <tr>
-                <td><label for="speed" >Speed</label></td>
-                <td><input id="speed" name="'WEB_1'.SPEED_1" type="number"  placeholder="Velocidad (mm/s)"/></td>
+                <th colspan="2"><label for="speed" >Velocidad</label></th>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="speed" name="'WEB_1'.SPEED_1" type="number"  placeholder="Velocidad (mm/s)"/></td>
             </tr>
         </table>
         <button id="submit" class="botonPrincipal" name="'WEB_1'.BOTON_MM" type="button" onclick="alternarMM()">INICIAR</button>

@@ -21,8 +21,7 @@ body {
 #grafico {
     width: 500px;
     height: 150px;
-    border: 1px solid #d3d3d3;
-    display: block;
+    border: 1px solid #d3d3d3; display: block;
 }
 
 #velocidadMedia {
@@ -44,4 +43,23 @@ body {
 
 #esquemaEstadisticas ul li {
     padding: 2.5px;
+}
+
+@media (max-width: 450px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: auto;
+    }
+
+    #documento {
+        width: 100%;
+        height: auto;
+    }
+
+    #grafico {
+        width:100%;
+    }
 }

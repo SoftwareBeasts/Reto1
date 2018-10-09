@@ -7,13 +7,33 @@ var posicionPrev = "none";
 
 /*Esta funcion lee las 8 variables de posicion para tenerlas guardadas*/
 function leerVarPos() {
+    console.log("Ha entrado leerVarPos");
     let arraydir = ["posizioa1", "posizioa2", "posizioa3", "posizioa4", "position_1", "position_2"
         , "position_3", "position_4"];
 
     for (let dir in arraydir){
-        $.get("./pages/leer_"+arraydir[dir]+".html",function(pos){
-            localStorage.setItem(arraydir[dir], pos.toString());
+        console.log("Leyendo: "+arraydir[dir]);
+        $.get("./leerVar/leer_"+arraydir[dir]+".html",function(pos){
+            if(dir > 3){
+                localStorage.setItem(arraydir[dir], (pos/100).toString());
+                console.log(pos);
+                console.log((pos/100).toString());
+            }
+            else{
+                localStorage.setItem(arraydir[dir], parseInt(pos, 10).toString());
+                console.log(pos.toString());
+                console.log(parseInt(pos.toString(), 10).toString());
+            }
         });
+    }
+    pruebaMostrar();
+}
+
+function pruebaMostrar(){
+    let arraydir = ["posizioa1", "posizioa2", "posizioa3", "posizioa4", "position_1", "position_2"
+        , "position_3", "position_4"];
+    for(let x in arraydir){
+        console.log(arraydir[x]+"= "+localStorage.getItem(arraydir[x]));
     }
 }
 
@@ -40,6 +60,7 @@ function CambiarModo(modo) {
     }
 }
 
+/*Guarda los datos de velocidad*/
 function avanzar() {
     let div = document.getElementById("esquema");
     let pos;
@@ -86,7 +107,7 @@ function GuardarDatos() {
 
 /*Este intervalo recoge cada 0.5 segundos la posición y la velocidad actuales, también sirve para la animación*/
 setInterval(function(){
-    $.get("../leerVar/leer_posicion.html",function(currentPosition){
+    $.get("./leerVar/leer_posicion.html",function(currentPosition){
         let esquema = document.getElementById("esquema");
         document.getElementById("posData").textContent = parseInt(currentPosition, 10).toString();
         /*$("#posData").text(position).toString();*/
@@ -107,11 +128,13 @@ setInterval(function(){
             esquema.className = "none";
         }
     });
-    $.get("../leerVar/leer_velocidad.html",function(currentSpeed){
+    $.get("./leerVar/leer_velocidad.html",function(currentSpeed){
         $("#velData").text(currentSpeed).toString();
         arrayVelocidad[contador] = currentSpeed;
         contador++;
     });
+    if (comprobarUso()) {
+        tiempo = tiempo + 0.5;
     tiempo = tiempo + 0.5;
     /*Guarda cada posicion por la que pasa la maquina*/
     posicion = document.getElementById("esquema").className;
@@ -132,7 +155,7 @@ setInterval(function(){
         localStorage.setItem("pos3", 1 + temp);
         posicionPrev = posicion;
     }
-},500);
+},500) ;
 
 /*function avanzarNueva() {
     console.log("ha entrado");

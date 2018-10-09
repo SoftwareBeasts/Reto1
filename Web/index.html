@@ -5,6 +5,10 @@
 <!-- AWP_In_Variable Name='"WEB_1".POSITION_2' -->
 <!-- AWP_In_Variable Name='"WEB_1".POSITION_3' -->
 <!-- AWP_In_Variable Name='"WEB_1".POSITION_4' -->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa1' -->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa2' -->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa3' -->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa4' -->
 <!-- AWP_In_Variable Name='"WEB_1".SPEED_1' -->
 <!-- AWP_In_Variable Name='"WEB_1".BOTON_MM' -->
 <!-- AWP_In_Variable Name='"WEB_1".BOTON_AUTOMATICO' -->
@@ -30,11 +34,9 @@
         <script src="js/sub_manual.js" type="text/javascript"></script>
         <script src="js/automatico.js" type="text/javascript"></script>
         <script src="js/sub_mm.js" type="text/javascript"></script>
-        <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png" />
-        <meta charset="utf-8">
-        </meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </meta>
+        <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png"/>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>Reto 1</title>
     </head>
 
@@ -67,9 +69,15 @@
         </div>
         <hr>
         <footer>
-            <p id="logos">Logotipo y link</p>
-            <p>Dirección y datos de contacto<br>
-                email y otras cosas</p>
+            <p>
+                <a href="https://github.com/SoftwareBeasts/Reto1" target="_blank"><img src="./media/github_logo.png"></a>
+                <a href="https://softwarebeasts.wordpress.com/" target="_blank"><img src="./media/wordpress_logo.png"></a>
+                <a href="https://softwarebeasts.github.io/" target="_blank"><img src="./media/github_pages_logo.png"></a>
+            </p>
+            <p id="sbl"><img src="./media/software_beasts_logo.png"></p>
+            <p>C/ Pozoa, s/n</p>
+            <p>Contacto: <a href="mailto:contacto@softwarebeasts.com" target="_top">contacto@softwarebeasts.com</a></p>
+            <p><a href="./pages/mit_license.html" target="_blank">MIT License</a></p>
         </footer>
         <script type="text/javascript">
             /*Este script carga las paginas en el div con id elementoAjax*/
@@ -87,6 +95,15 @@
                     alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
                 }
             })
+        $("#cotas").click(function(){
+          if (comprobarUso()) {
+            $("#elementoAjax").load("./pages/sub_mm.html");
+          }
+          else {
+            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
+          }
+        })
+        /*Este script carga las paginas en el div con id elementoAjax*/
             $("#cotas").click(function() {
                 if (comprobarUso()) {
                     $("#elementoAjax").load("./pages/sub_mm.html");
@@ -99,5 +116,4 @@
             /*Este script actualiza las label de Posicion y Velocidad*/
         </script>
     </body>
-
 </html>
