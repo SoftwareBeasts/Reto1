@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
     <head>
         <link rel="stylesheet" type="text/css" href="../css/estadisticas.css">
-        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/png" href="../media/favicon_software_beasts_color.png" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Estadisticas</title>
-        <script src="estadisticas.js"></script>
     </head>
 
     <body>
         <div id="documento">
             <h1>Estadísticas</h1>
-            <h3 id="h3">Modo: </h3>
+            <h3 id="modoH3">Modo: </h3>
             <strong>Gráfico de velocidad</strong><br />
             <canvas id="grafico">
                 Tu navegador no soporta la etiqueta canvas de HTML5.
-            </canvas><br />
-            (Velocidad (mm/s)/ Tiempo (s))
+            </canvas>
+            (Velocidad (mm/s) / Tiempo (s))
             <br /> <br />
             <span id="velocidadMedia">Velocidad media: </span><br />
             <span id="tiempoTotal">Tiempo total transcurrido en el modo: </span>
+            <div id="esquemaEstadisticas">
+                <strong>Historial de posiciones:</strong>
+                <ul>
+                    <li id="pos0">Posición 0: </li>
+                    <li id="pos1">Posición 1: </li>
+                    <li id="pos2">Posición 2: </li>
+                    <li id="pos3">Posición 3: </li>
+                </ul>
+            </div>
         </div>
     </body>
+    <script src="../js/estadisticas.js"></script>
 
 </html>

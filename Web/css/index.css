@@ -79,7 +79,10 @@ nav {
     transform: translateY(4px);
 }
 
-/*----Prototipado----*/
+#gif {
+    display: none;
+}
+
 #datos {
     float: left;
     position: absolute;
@@ -168,17 +171,46 @@ div#posicionesEsquema label.pos4 {
     display: block;
     width: 25%;
     text-align: center;
-    padding: 0px;
+    padding: 0;
     float: left;
-
 }
 
-hr {
-    margin-top: 90px;
+#hrtop {
+    margin-top: 84px;
 }
 
 footer {
     text-align: center;
+    text-decoration: none;
+}
+
+footer p a {
+    margin-top: 1%;
+    color: black;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+footer p a:visited {
+    color: black;
+}
+
+footer p a img {
+    padding: 1%;
+}
+
+footer p#sbl {
+    width: 256px;
+    height: 144px;
+    margin: 0 auto;
+}
+
+footer p#sbl img {
+    width: 100%;
+    height: auto;
 }
 
 #logos {
@@ -199,7 +231,6 @@ footer {
     background-color: #01363f;
     border-radius: 5px;
     text-transform: uppercase;
-    margin-top: 50px;
     padding: 15px 25px;
     font-size: 24px;
     text-align: center;
@@ -207,20 +238,30 @@ footer {
     outline: none;
 }
 
-.principal table {
-    margin: 50px auto 0 auto;
+table+.botonPrincipal {
+    margin-top: 50px;
 }
 
-.principal table label {
+.botonPrincipal+.botonPrincipal {
+    margin-top: 50px;
+}
+
+.principal table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.principal label {
     color: black;
 }
 
-.principal td input {
+.principal input {
     font-family: Verdana, Calibri, serif;
 }
 
-.efectoclickMan {
-    background-color: #ffb84d;
+.principal span.saltoLinea {
+    visibility:hidden;
+    color:transparent;
 }
 
 /*  Diseño móvil */
@@ -233,11 +274,11 @@ footer {
         width: 90%;
     }
 
-    nav, #estadisticas, #elementoAjax, footer {
+    nav, #estadisticas, #btn_origen, #elementoAjax, footer {
         width: 100%;
     }
 
-    #btn_origen, #datos, #esquema, #posicionesEsquema, hr {
+    #datos, #esquema, #posicionesEsquema, hr {
         display: none;
     }
 
@@ -246,18 +287,17 @@ footer {
         width: 100%;
     }
 
-    #estadisticas {
+    #estadisticas, #btn_origen {
         position: static;
         margin-bottom: 30px;
     }
 
-    #elementoAjax h1 {
-        margin-top: 40px;
-        font-size: 200%;
+    #elementoAjax {
+        height: auto;
     }
 
-    .botonPrincipal {
-        width: 100%;
-        margin-top: 50px;
+    #elementoAjax h1 {
+        font-size: 250%;
+        margin: 0 auto;
     }
 }

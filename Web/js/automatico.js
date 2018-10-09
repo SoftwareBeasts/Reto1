@@ -27,9 +27,8 @@ function botonSellar() {
 
 function botonParar() {
     document.getElementById("hBotonAutomatico").value="false";
-    document.getElementById("hPaso1").value="false";
-    document.getElementById("hPaso2").value="false";
-    document.getElementById("hPaso3").value="false";
+    document.getElementById("hEmpaquetar").value="false";
+    document.getElementById("hSellar").value="false";
 }*/
 /*ESTA FUNCION ES MUY IMPORTANTE, VOY A TOMARLA COMO BASE PARA EL RESTO DE LA LOGICA DE ESTO*/
 /*function enviarDatos(nomVar,val){
