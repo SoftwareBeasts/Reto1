@@ -12,28 +12,14 @@ function leerVarPos() {
         , "position_3", "position_4"];
 
     for (let dir in arraydir){
-        console.log("Leyendo: "+arraydir[dir]);
         $.get("./leerVar/leer_"+arraydir[dir]+".html",function(pos){
             if(dir > 3){
                 localStorage.setItem(arraydir[dir], (pos/100).toString());
-                console.log(pos);
-                console.log((pos/100).toString());
             }
             else{
-                localStorage.setItem(arraydir[dir], parseInt(pos, 10).toString());
-                console.log(pos.toString());
-                console.log(parseInt(pos.toString(), 10).toString());
+                /*No utilizado por problemas de variables con los de ARI*/
             }
         });
-    }
-    pruebaMostrar();
-}
-
-function pruebaMostrar(){
-    let arraydir = ["posizioa1", "posizioa2", "posizioa3", "posizioa4", "position_1", "position_2"
-        , "position_3", "position_4"];
-    for(let x in arraydir){
-        console.log(arraydir[x]+"= "+localStorage.getItem(arraydir[x]));
     }
 }
 
@@ -50,7 +36,6 @@ function CambiarModo(modo) {
             modos[i].className = " boton";
         }
         document.getElementById(modo).className += " efectoclick";
-        var estadisticasAnte = document.getElementById("estadisticasAnteriores");
         tiempo = 0;
     } else {
         var modos = document.getElementsByClassName("boton efectoclick");
@@ -58,30 +43,6 @@ function CambiarModo(modo) {
             modos[i].focus();
         }
     }
-}
-
-/*Guarda los datos de velocidad*/
-function avanzar() {
-    let div = document.getElementById("esquema");
-    let pos;
-    switch (div.className) {
-        case "none":
-            pos = "pos1";
-            break;
-
-        case "pos1":
-            pos = "pos2";
-            break;
-
-        case "pos2":
-            pos = "pos3";
-            break;
-
-        default:
-            pos = "none";
-            break;
-    }
-    div.className = pos;
 }
 
 /*Guarda datos necesarios para estadisticas*/
@@ -108,12 +69,14 @@ function GuardarDatos() {
 /*Este intervalo recoge cada 0.5 segundos la posición y la velocidad actuales, también sirve para la animación*/
 setInterval(function(){
     $.get("./leerVar/leer_posicion.html",function(currentPosition){
-        let esquema = document.getElementById("esquema");
-        document.getElementById("posData").textContent = parseInt(currentPosition, 10).toString();
+        document.getElementById("posData").textContent = (currentPosition/100).toString();
+        let margen = Math.round(((33.5/9000)*currentPosition)+29);
+        console.log(margen.toString());
+        document.getElementById("esquema").style.marginLeft = margen+"%";
         /*$("#posData").text(position).toString();*/
-        if(currentPosition >= 33){
-            if(currentPosition >= 66){
-                if(currentPosition === 100){
+        /*if(pos >= 30){
+            if(pos >= 60){
+                if(pos === 90){
                     esquema.className = "pos3";
                 }
                 else{
@@ -126,7 +89,7 @@ setInterval(function(){
         }
         else{
             esquema.className = "none";
-        }
+        }*/
     });
     $.get("./leerVar/leer_velocidad.html",function(currentSpeed){
         $("#velData").text(currentSpeed).toString();
@@ -138,7 +101,7 @@ setInterval(function(){
     if (comprobarUso() == false) {
         tiempo = tiempo + 0.5;
     }
-    
+  
     /*Guarda cada posicion por la que pasa la maquina*/
     posicion = document.getElementById("esquema").className;
     if (posicion != posicionPrev && posicionPrev == "none"){
