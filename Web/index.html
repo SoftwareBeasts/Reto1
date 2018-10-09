@@ -88,16 +88,16 @@
             $("#manual").click(function() {
                 verificarPag("sub_manual");
             });
-            $("#cotas").click(function(){
+            $("#cotas").click(function() {
                 verificarPag("sub_mm");
             });
 
             function verificarPag(pag) {
                 if (comprobarUso()) {
                     $("#elementoAjax").load("./pages/" + pag + ".html");
-                }
-                else {
+                } else {
                     alert("No puede camiar de modo porque hay uno activo");
+                }
             }
             /*Este script carga las paginas en el div con id elementoAjax*/
         </script>
