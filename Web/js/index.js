@@ -135,7 +135,7 @@ setInterval(function(){
     });
     if (comprobarUso()) {
         tiempo = tiempo + 0.5;
-    tiempo = tiempo + 0.5;
+    }
     /*Guarda cada posicion por la que pasa la maquina*/
     posicion = document.getElementById("esquema").className;
     if (posicion != posicionPrev && posicionPrev == "none"){
