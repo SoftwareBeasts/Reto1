@@ -15,6 +15,7 @@ function volverOrigen(){
   if (comprobarUso()) {
       var origenActivado = document.getElementById("gif");
       origenActivado.style.display = "inline-block";
+      botonLoadOrigen = true;
     $($.ajax({
       method:'POST',
       data:'\"WEB_1\".ON_ORIGEN=true',
