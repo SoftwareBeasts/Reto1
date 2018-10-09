@@ -1,33 +1,33 @@
 <!-- AWP_In_Variable Name='"WEB_1".BOTON_AUTOMATICO' -->
 <!-- AWP_In_Variable Name='"WEB_1".Empaquetar' -->
 <!-- AWP_In_Variable Name='"WEB_1".Sellar'-->
-
+<!-- AWP_In_Variable Name='"WEB_1".posizioa2'-->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa1'-->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa4'-->
+<!-- AWP_In_Variable Name='"WEB_1".posizioa3'-->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="../css/automatico.css" />
-    <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="../js/automatico.js"></script>
-    <meta charset="UTF-8"></meta>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-</head>
+<html lang="es">
 <body>
 <div class="principal">
     <!--<form method="post">-->
         <table>
             <tr>
-                <td><label for="position1auto" >Introducir las posiciones es opcional</label></td>
+                <th colspan="2"><label for="position1auto" >Introducir las posiciones es opcional</label></th>
             </tr>
             <tr>
+                <th><label for="position1auto">Posición 1</label></th>
                 <td><input id="position1auto" name="'WEB_1'.posizioa2" type="number" placeholder="Distancia (mm)" autofocus/></td>
             </tr>
             <tr>
+                <th><label for="position2auto">Posición 2</label></th>
                 <td><input id="position2auto" name="'WEB_1'.posizioa1" type="number" placeholder="Distancia (mm)" /></td>
             </tr>
             <tr>
+                <th><label for="position3auto">Posición 3</label></th>
                 <td><input id="position3auto" name="'WEB_1'.posizioa4" type="number" placeholder="Distancia (mm)" /></td>
             </tr>
             <tr>
+                <th><label for="position4auto">Posición 4</label></th>
                 <td><input id="position4auto" name="'WEB_1'.posizioa3" type="number" placeholder="Distancia (mm)" /></td>
             </tr>
         </table>
@@ -37,9 +37,8 @@
         <button id="auto_sellar" class="botonPrincipal" onclick="enviarSennalx('Sellar',true)" disabled="true" >Sellar</button>
         <!--<button onclick="botonParar()" >Parar</button>-->
     <!--     <input id="hBotonAutomatico" type="hidden" name="'WEB_1'.'BOTON AUTOMATICO'" />
-       <input id="hPaso1" type="hidden" name="'WEB_1'.PASO1" />
-        <input id="hPaso2" type="hidden" name="'WEB_1'.PASO2" />
-        <input id="hPaso3" type="hidden" name="'WEB_1'.PASO3" />
+       <input id="hPaso1" type="hidden" name="'WEB_1'.Empaquetar" />
+        <input id="hPaso2" type="hidden" name="'WEB_1'.Sellar" />
     </form>-->
 
 </div>

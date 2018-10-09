@@ -1,9 +1,9 @@
 /*Variables que van a servir para guardar los datos para después hacer generar las estadísticas*/
 var arrayVelocidad = [];
-contador = 0;
+var contador = 0;
 var tiempo = 0;
 var posicion = 0;
-var posicionPrev = "none";
+var posicionPrev = document.getElementById("esquema").className;
 
 /*Esta funcion lee las 8 variables de posicion para tenerlas guardadas*/
 function leerVarPos() {
@@ -24,7 +24,6 @@ function leerVarPos() {
 }
 
 window.onbeforeunload = function() {
-    localStorage.clear();
     return "";
 }
 
@@ -37,7 +36,7 @@ function CambiarModo(modo) {
             modos[i].className = " boton";
         }
         document.getElementById(modo).className += " efectoclick";
-        var estadisticasAnte = document.getElementById("estadisticasAnteriores");
+        tiempo = 0;
     } else {
         var modos = document.getElementsByClassName("boton efectoclick");
         for (var i = 0; i < modos.length; i++) {
@@ -97,9 +96,12 @@ setInterval(function(){
         arrayVelocidad[contador] = currentSpeed;
         contador++;
     });
-    if (comprobarUso()) {
+
+    /*Cuenta cuando se usa un modo*/
+    if (comprobarUso() == false) {
         tiempo = tiempo + 0.5;
     }
+  
     /*Guarda cada posicion por la que pasa la maquina*/
     posicion = document.getElementById("esquema").className;
     if (posicion != posicionPrev && posicionPrev == "none"){

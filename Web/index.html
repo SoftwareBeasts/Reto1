@@ -34,44 +34,47 @@
         <script src="js/sub_manual.js" type="text/javascript"></script>
         <script src="js/automatico.js" type="text/javascript"></script>
         <script src="js/sub_mm.js" type="text/javascript"></script>
-        <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png"/>
-        <meta charset="utf-8"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Reto 1</title>
     </head>
 
-    <body onload="leerVarPos()">
+    <body onload="localStorage.clear();leerVarPos();">
         <nav>
             <button id="auto" class="boton" onclick="CambiarModo('auto')">Automático</button>
             <button id="manual" class="boton" onclick="CambiarModo('manual')">Manual</button>
             <button id="cotas" class="boton" style="margin-right: 0px;" onclick="CambiarModo('cotas')">Por cotas</button>
         </nav>
 
-        <button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button>
-        <!--button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png"></img></button PARA HACER QUE LA ANIMACION AVANCE-->
+        <button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png" />Estadisticas</button>
+        <!--<button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png" /></button> PARA HACER QUE LA ANIMACION AVANCE-->
 
         <div id="datos">
             <span>Posici&oacute;n: <label id="posData">0</label></span><br />
             <span>Velocidad: <label id="velData">0</label></span>
         </div>
         <div id="elementoAjax">
-            <h1>Escoje un modo</h1>
+            <h1>Escoge un modo</h1>
         </div>
-        <button id="btn_origen" onclick="volverOrigen()">ORIGEN</button>
-        <div id="esquema"></div>
+        <button id="btn_origen" onclick="volverOrigen()"><i id="gif" class="fa fa-circle-o-notch fa-spin"></i> ORIGEN</button>
+        <div id="esquema" class="none">
+        </div>
         <div id="posicionesEsquema">
             <label class="pos1">Posición 0</label>
             <label class="pos2">Posición 1</label>
             <label class="pos3">Posición 2</label>
             <label class="pos4">Posición 3</label>
         </div>
-        <hr>
+
         <footer>
+            <hr id="hrtop">
             <p>
                 <a href="https://github.com/SoftwareBeasts/Reto1" target="_blank"><img src="./media/github_logo.png"></a>
                 <a href="https://softwarebeasts.wordpress.com/" target="_blank"><img src="./media/wordpress_logo.png"></a>
                 <a href="https://softwarebeasts.github.io/" target="_blank"><img src="./media/github_pages_logo.png"></a>
             </p>
+            <hr>
             <p id="sbl"><img src="./media/software_beasts_logo.png"></p>
             <p>C/ Pozoa, s/n</p>
             <p>Contacto: <a href="mailto:contacto@softwarebeasts.com" target="_top">contacto@softwarebeasts.com</a></p>
@@ -95,9 +98,9 @@
                 }
                 else {
                     alert("No puede camiar de modo porque hay uno activo");
-                }
             }
             /*Este script carga las paginas en el div con id elementoAjax*/
         </script>
     </body>
+
 </html>

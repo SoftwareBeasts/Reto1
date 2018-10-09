@@ -1,8 +1,3 @@
-html, body {
-    height: 100%;
-    overflow: hidden;
-}
-
 body {
     background-color: #f2f0f4;
     font-family: Verdana, Calibri, serif;
@@ -15,14 +10,12 @@ body {
     border: 1.5px solid lightgrey;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 50%;
-    height: 90%;
 }
 
 #grafico {
     width: 500px;
     height: 150px;
-    border: 1px solid #d3d3d3;
-    display: block;
+    border: 1px solid #d3d3d3; display: block;
 }
 
 #velocidadMedia {
@@ -44,4 +37,18 @@ body {
 
 #esquemaEstadisticas ul li {
     padding: 2.5px;
+}
+
+@media (max-width: 450px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    #documento {
+        width: 100%;
+    }
+
+    #grafico {
+        width:100%;
+    }
 }
