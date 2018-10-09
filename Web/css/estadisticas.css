@@ -62,4 +62,8 @@ body {
     #grafico {
         width:100%;
     }
+
+    #esquemaEstadisticas {
+        display: none;
+    }
 }
