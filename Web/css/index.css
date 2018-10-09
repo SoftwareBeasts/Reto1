@@ -83,7 +83,6 @@ nav {
     display: none;
 }
 
-/*----Prototipado----*/
 #datos {
     float: left;
     position: absolute;
@@ -174,11 +173,10 @@ div#posicionesEsquema label.pos4 {
     text-align: center;
     padding: 0;
     float: left;
-
 }
 
-hr {
-    margin-top: 90px;
+#hrtop {
+    margin-top: 84px;
 }
 
 footer {
@@ -240,11 +238,11 @@ footer p#sbl img {
     outline: none;
 }
 
-table + .botonPrincipal {
+table+.botonPrincipal {
     margin-top: 50px;
 }
 
-.botonPrincipal + .botonPrincipal {
+.botonPrincipal+.botonPrincipal {
     margin-top: 50px;
 }
 
