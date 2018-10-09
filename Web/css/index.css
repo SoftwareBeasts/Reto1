@@ -119,12 +119,14 @@ div #datos span {
 
 /*Animacion esquema*/
 #esquema {
-    background-color: black;
+    background-color: #ffb84d;
     width: 5%;
     height: 50px;
     color: white;
     position: relative;
     transition: margin-left 4s;
+    margin-left: 29%;
+    border: #cc9240 2px dashed;
 }
 
 #esquema.none {
