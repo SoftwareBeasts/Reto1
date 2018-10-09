@@ -25,18 +25,15 @@
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/sub_manual.css" />
-        <link rel="stylesheet" type="text/css" href="css/automatico.css" />
-        <link rel="stylesheet" type="text/css" href="css/sub-mm.css" />
         <script src="js/index.js"></script>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="js/index_jquery.js" type="text/javascript"></script>
         <script src="js/sub_manual.js" type="text/javascript"></script>
         <script src="js/automatico.js" type="text/javascript"></script>
         <script src="js/sub_mm.js" type="text/javascript"></script>
-        <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png"/>
-        <meta charset="utf-8"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <link rel="shortcut icon" type="image/png" href="media/favicon_software_beasts_color.png" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Reto 1</title>
     </head>
 
@@ -47,8 +44,8 @@
             <button id="cotas" class="boton" style="margin-right: 0px;" onclick="CambiarModo('cotas')">Por cotas</button>
         </nav>
 
-        <button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png"></img>Estadisticas</button>
-        <!--button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png"></img></button PARA HACER QUE LA ANIMACION AVANCE-->
+        <button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png" />Estadisticas</button>
+        <!--<button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png" /></button> PARA HACER QUE LA ANIMACION AVANCE-->
 
         <div id="datos">
             <span>Posici&oacute;n: <label id="posData">0</label></span><br />
@@ -95,15 +92,6 @@
                     alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
                 }
             })
-        $("#cotas").click(function(){
-          if (comprobarUso()) {
-            $("#elementoAjax").load("./pages/sub_mm.html");
-          }
-          else {
-            alert("NO PUEDES CAMBIAR DE MODO PORQUE HAY UNO ACTIVO");
-          }
-        })
-        /*Este script carga las paginas en el div con id elementoAjax*/
             $("#cotas").click(function() {
                 if (comprobarUso()) {
                     $("#elementoAjax").load("./pages/sub_mm.html");

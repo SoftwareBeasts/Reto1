@@ -172,7 +172,7 @@ div#posicionesEsquema label.pos4 {
     display: block;
     width: 25%;
     text-align: center;
-    padding: 0px;
+    padding: 0;
     float: left;
 
 }
@@ -259,6 +259,11 @@ table + .botonPrincipal {
 
 .principal input {
     font-family: Verdana, Calibri, serif;
+}
+
+.principal span.saltoLinea {
+    visibility:hidden;
+    color:transparent;
 }
 
 /*  Diseño móvil */
