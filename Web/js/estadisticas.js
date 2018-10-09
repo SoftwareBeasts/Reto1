@@ -1,5 +1,18 @@
 document.getElementById("modoH3").innerHTML = "Modo: " + localStorage.getItem("ModoEstadisticas");
 
+/*Dibuja del grafico*/
+var tiempototal = localStorage.getItem("Tiempo total");
+var velocidad = localStorage.getItem("Velocidad").split(",");
+var reparto = 500 / tiempototal;
+var c = document.getElementById("grafico");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(0, 150);
+for (let i = 0; i < velocidad.length; i++) {
+    ctx.lineTo(i * reparto, (150 - velocidad[i]));
+}
+ctx.stroke();
+
 /*Calcula individualmente las estadisticas para cada modo*/
 if(localStorage.getItem("Modo") == "auto"){
     /*Velocidad media*/
@@ -44,16 +57,3 @@ document.getElementById("pos0").innerHTML = "Posición 0: " + localStorage.getIt
 document.getElementById("pos1").innerHTML = "Posición 1: " + localStorage.getItem("pos1") + " veces";
 document.getElementById("pos2").innerHTML = "Posición 2: " + localStorage.getItem("pos2") + " veces";
 document.getElementById("pos3").innerHTML = "Posición 3: " + localStorage.getItem("pos3") + " veces";
-
-/*Dibuja del grafico*/
-var tiempototal = localStorage.getItem("Tiempo total");
-var velocidad = localStorage.getItem("Velocidad").split(",");
-var reparto = 500 / tiempototal;
-var c = document.getElementById("grafico");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.moveTo(0, 150);
-for (let i = 0; i < velocidad.length; i++) {
-    ctx.lineTo(i * reparto, (150 - velocidad[i]));
-}
-ctx.stroke();
