@@ -1,50 +1,6 @@
 /*Variables Globales*/
   var automaticoCheck = false;
 
-/*Variables Globales*/
-/*function botonIniciar() {
-
-    document.getElementById("hBotonAutomatico").value="true";
-    document.getElementById("hEmpaquetar").value="false";
-    document.getElementById("hSellar").value="false";
-}
-
-function botonEmpaquetar() {
-    if (document.getElementById("hBotonAutomatico").value === "true")
-    {
-        document.getElementById("hEmpaquetar").value = "true";
-        document.getElementById("hSellar").value = "false";
-    }
-}
-
-function botonSellar() {
-    if(document.getElementById("hBotonAutomatico").value==="true")
-    {
-        document.getElementById("hEmpaquetar").value="false";
-        document.getElementById("hSellar").value="true";
-    }
-}
-
-function botonParar() {
-    document.getElementById("hBotonAutomatico").value="false";
-    document.getElementById("hEmpaquetar").value="false";
-    document.getElementById("hSellar").value="false";
-}*/
-/*ESTA FUNCION ES MUY IMPORTANTE, VOY A TOMARLA COMO BASE PARA EL RESTO DE LA LOGICA DE ESTO*/
-/*function enviarDatos(nomVar,val){
-  var datos = '\"WEB_1\".'+nomVar+"="+val;
-  $($.ajax({
-    method:'POST',
-    data:datos,
-    success: function(datos){
-      console.log("funciona, el valor que se ha enviado es \n"+"WEB_1."+nomVar+"="+val);
-    },
-    error: function(){
-      console.log("errores");
-    }
-  }))
-}*/
-
 /*Esta funcion envia los datos de los inputs a la base de datos*/
 function enviarDatosx(){
   var datos = '\"WEB_1\".'+"posizioa2"+"="+document.getElementById("position1auto").value+"&"+'\"WEB_1\".'+"posizioa1"+"="+document.getElementById("position2auto").value

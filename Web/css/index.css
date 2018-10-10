@@ -79,14 +79,14 @@ nav {
     transform: translateY(4px);
 }
 
-#btn_reset{
+#btn_reset {
     float: left;
     position: absolute;
     left: auto;
     right: 13%;
     width: 10%;
-    padding:15px;
-    border:none;
+    padding: 15px;
+    border: none;
     font-size: 14px;
     background-color: #7fc7af;
     border-radius: 10px;
@@ -141,39 +141,7 @@ div #datos span {
     border: #cc9240 2px dashed;
 }
 
-#esquema.none {
-    margin-left: 25%;
-}
-
-#esquema.pos1 {
-    margin-left: 39.5%;
-}
-
-#esquema.pos2 {
-    margin-left: 54.5%;
-}
-
-#esquema.pos3 {
-    margin-left: 69.5%;
-}
-
 /*Fin animacion*/
-/*#esquema {
-    width: 5%;
-    height: 60px;
-    background-color: black;
-    position: relative;
-    animation-name: posicion;
-    animation-play-state: paused;
-    animation-duration: 4s;
-    margin-left: var(--margin);
-    animation-fill-mode: both;
-}
-
-@keyframes posicion {
-    0%   {margin-left: var(--first-margin-left);}
-    100% {margin-left: var(--second-margin-left);}
-}*/
 div#posicionesEsquema {
     width: 50%;
     margin: 0 auto;
@@ -289,7 +257,7 @@ table+.botonPrincipal {
         width: 90%;
     }
 
-    nav, #estadisticas, #btn_origen, #elementoAjax,#btn_reset, footer {
+    nav, #estadisticas, #btn_origen, #elementoAjax, #btn_reset, footer {
         width: 100%;
     }
 
@@ -302,7 +270,7 @@ table+.botonPrincipal {
         width: 100%;
     }
 
-    #estadisticas, #btn_origen,#btn_reset {
+    #estadisticas, #btn_origen, #btn_reset {
         position: static;
         margin-bottom: 30px;
     }
