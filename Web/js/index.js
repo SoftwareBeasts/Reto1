@@ -114,6 +114,7 @@ setInterval(function(){
         localStorage.setItem("pos3", 1 + temp);
         posicionPrev4 = true;
     }
+
     /*Quita la animacion del boton origen tras 3 segundos*/
     if (contador2 == 6 && botonLoadOrigen == true) {
         var origenActivado = document.getElementById("gif");
