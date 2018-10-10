@@ -1,9 +1,16 @@
 /*Variables que van a servir para guardar los datos para después hacer generar las estadísticas*/
 var arrayVelocidad = [];
 var contador = 0;
+var contador2 = 0;
+var botonLoadOrigen = false;
 var tiempo = 0;
 var posicion = 0;
 var posicionPrev = document.getElementById("esquema").className;
+
+/*Mensaje de confirmación a la hora de salir o recargar la pagina*/
+window.onbeforeunload = function() {
+    return "";
+}
 
 /*Esta funcion lee las 8 variables de posicion para tenerlas guardadas*/
 function leerVarPos() {
@@ -21,10 +28,6 @@ function leerVarPos() {
             }
         });
     }
-}
-
-window.onbeforeunload = function() {
-    return "";
 }
 
 /*Mantiene la selección del modo en el nav y guarda el modo en el que se queda*/
@@ -101,7 +104,7 @@ setInterval(function(){
     if (comprobarUso() == false) {
         tiempo = tiempo + 0.5;
     }
-  
+
     /*Guarda cada posicion por la que pasa la maquina*/
     posicion = document.getElementById("esquema").className;
     if (posicion != posicionPrev && posicionPrev == "none"){
@@ -120,6 +123,14 @@ setInterval(function(){
         let temp = localStorage.getItem("Posicion 3");
         localStorage.setItem("pos3", 1 + temp);
         posicionPrev = posicion;
+    }
+
+    /*Quita la animacion del boton origen tras 3 segundos*/
+    if (contador2 == 6 && botonLoadOrigen == true) {
+        var origenActivado = document.getElementById("gif");
+        origenActivado.style.display = "none";
+    } else if (botonLoadOrigen == true){
+        contador2++;
     }
 },500) ;
 

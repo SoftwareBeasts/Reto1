@@ -79,6 +79,19 @@ nav {
     transform: translateY(4px);
 }
 
+#btn_reset{
+    float: left;
+    position: absolute;
+    left: auto;
+    right: 13%;
+    width: 10%;
+    padding:15px;
+    border:none;
+    font-size: 14px;
+    background-color: #7fc7af;
+    border-radius: 10px;
+}
+
 #gif {
     display: none;
 }
@@ -276,7 +289,7 @@ table+.botonPrincipal {
         width: 90%;
     }
 
-    nav, #estadisticas, #btn_origen, #elementoAjax, footer {
+    nav, #estadisticas, #btn_origen, #elementoAjax,#btn_reset, footer {
         width: 100%;
     }
 
@@ -289,7 +302,7 @@ table+.botonPrincipal {
         width: 100%;
     }
 
-    #estadisticas, #btn_origen {
+    #estadisticas, #btn_origen,#btn_reset {
         position: static;
         margin-bottom: 30px;
     }
