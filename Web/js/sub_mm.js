@@ -14,21 +14,6 @@ function activarB() {
         elements[el].removeAttribute('disabled')
     }
 }
-
-/*ESTA FUNCION ES MUY IMPORTANTE, VOY A TOMARLA COMO BASE PARA EL RESTO DE LA LOGICA DE ESTO*/
-/*function enviarDatos(nomVar,val){
-    var datos = '\"WEB_1\".'+nomVar+"="+val;
-    $($.ajax({
-        method:'POST',
-        data:datos,
-        success: function(datos){
-            console.log("funciona, el valor que se ha enviado es \n"+"WEB_1."+nomVar+"="+val);
-        },
-        error: function(){
-            console.log("errores");
-        }
-    }))
-}*/
 /*Envia los datos de las posiciones y de la velocidad*/
 function enviarDatos(){
     var datos = '\"WEB_1\".'+"POSITION_1"+"="+document.getElementById("position1").value+"&"+'\"WEB_1\".'+"POSITION_2"+"="+document.getElementById("position2").value
