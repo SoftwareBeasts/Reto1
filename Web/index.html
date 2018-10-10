@@ -21,6 +21,7 @@
 <!-- AWP_In_Variable Name='"WEB_1".RESET'-->
 <!DOCTYPE html>
 <html lang="es">
+
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -34,6 +35,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Reto 1</title>
     </head>
+
     <body onload="localStorage.clear();leerVarPos();">
         <nav>
             <button id="auto" class="boton" onclick="CambiarModo('auto')">Automático</button>
@@ -52,7 +54,7 @@
         </div>
         <button id="btn_reset" onclick="RESET()">RESET</button>
         <button id="btn_origen" onclick="volverOrigen()"><i id="gif" class="fa fa-circle-o-notch fa-spin"></i> ORIGEN</button>
-        <div id="esquema" class="none">
+        <div id="esquema">
         </div>
         <div id="posicionesEsquema">
             <label class="pos1">Posición 0</label>
