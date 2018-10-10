@@ -11,7 +11,7 @@
 Esta página web sive para que los operarios de la empresa de latas de conservas puedan controlar el autómata de una manera más sencilla e intuitiva que directamente usando el programa base.
 
 ## Descarga
-Disponemos de un [manual de usuario](/Documentación/Manual de Usuario.pdf) en el que explicamos los pasos a seguir 
+Disponemos de un [manual de usuario](/Documentaci%C3%B3n/Manual%20de%20Usuario.pdf) en el que explicamos los pasos a seguir 
 para la descarga y el funcionamiento nuestra página web.
 
 ## Documentación
