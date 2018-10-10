@@ -18,18 +18,13 @@
 <!-- AWP_In_Variable Name='"WEB_1".CURRENT_POSITION'-->
 <!-- AWP_In_Variable Name='"WEB_1".CURRENT_SPEED'-->
 <!-- AWP_In_Variable Name='"WEB_1".ON_ORIGEN'-->
-
+<!-- AWP_In_Variable Name='"WEB_1".RESET'-->
 <!DOCTYPE html>
 <html lang="es">
-
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/sub_manual.css" />
-        <link rel="stylesheet" type="text/css" href="css/automatico.css" />
-        <link rel="stylesheet" type="text/css" href="css/sub-mm.css" />
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-        <script src="js/index.js"></script>
         <script src="js/index_jquery.js" type="text/javascript"></script>
         <script src="js/sub_manual.js" type="text/javascript"></script>
         <script src="js/automatico.js" type="text/javascript"></script>
@@ -39,7 +34,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Reto 1</title>
     </head>
-
     <body onload="localStorage.clear();leerVarPos();">
         <nav>
             <button id="auto" class="boton" onclick="CambiarModo('auto')">Automático</button>
@@ -48,7 +42,6 @@
         </nav>
 
         <button id="estadisticas" onclick="GuardarDatos()"><img class="icono" src="media/chart-pie-solid.png" />Estadisticas</button>
-        <!--<button id="estadisticas" onclick="avanzar()"><img class="icono" src="media/chart-pie-solid.png" /></button> PARA HACER QUE LA ANIMACION AVANCE-->
 
         <div id="datos">
             <span>Posici&oacute;n: <label id="posData">0</label></span><br />
@@ -57,6 +50,7 @@
         <div id="elementoAjax">
             <h1>Escoge un modo</h1>
         </div>
+        <button id="btn_reset" onclick="RESET()">RESET</button>
         <button id="btn_origen" onclick="volverOrigen()"><i id="gif" class="fa fa-circle-o-notch fa-spin"></i> ORIGEN</button>
         <div id="esquema" class="none">
         </div>
@@ -102,5 +96,7 @@
             /*Este script carga las paginas en el div con id elementoAjax*/
         </script>
     </body>
+    <!--Se encuentra en esta línea al final para evitar conflictos con los "document.getElement.."-->
+    <script src="js/index.js"></script>
 
 </html>

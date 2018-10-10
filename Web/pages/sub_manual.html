@@ -6,45 +6,8 @@
     <body>
         <div class="principal">
                 <button class="botonPrincipal" id="manBotonMan" onclick="alternarManual()">INICIAR</button>
-            <!--<form id="fManual" method="post" onsubmit="return envioDeDatos(this.id);">Necesita ID para enviarlo junto a la funcion,al enviar necesita retornar una funcion que siempre de false-->
                 <button class="botonPrincipal" id="manAdelante" onclick="enviarSennal('ADELANTE',this.id,'manAtras')" value="libre" disabled=true>ADELANTE</button>
-                <!--<button class="sub_manual" id="manParar" onclick="enviarDatos('')" >PARAR</button>-->
-                <!--Este boton no es el boton de emergencia, si no lo que hace es cambiar
-                el estado de ADELANTE o ATRAS y ponerlos a false(0)-->
                 <button class="botonPrincipal" id="manAtras" onclick="enviarSennal('ATRAS',this.id,'manAdelante') " value="libre" disabled=true>ATRAS</button>
-            <!--    <input class="sub_manual" id="manInAd" type="text" name="'WEB_1'.ADELANTE" />
-                <input class="sub_manual" id="manInAt" type="text" name="'WEB_1'.ATRAS" />
-
-            </form>-->
         </div>
-        <!--<script>
-            /*var valAdelante =: = "WEB_1".ADELANTE: ;
-            var valAtras =: = "WEB_1".ATRAS: ;
-
-            window.onload = function() {
-                if (valAdelante == false && valAtras == false) {
-                    enable();
-                } else if (valAdelante == true || valAtras == true) {
-                    disable();
-                }*/
-
-                /*Aplica la clase efectoclick para mostrar el boton como pulsado y elimina el resto*/
-              /*  var BtnPulsado = localStorage.getItem("BtnPulsado");
-                if (BtnPulsado != null) {
-                    var elementos = document.getElementsByClassName(" efectoclickMan");
-                    if (elementos.length != 0) {
-                        for (var i = 0; i < elementos.length; i++) {
-                            elementos[i].className = " sub_manual";
-                        }
-                    }
-                    document.getElementById(BtnPulsado).className = " efectoclickMan";
-                }
-            }*/
-            /*Para index*/
-            /*window.onbeforeunload = function() {
-                var modo = localStorage.getItem("Modo");
-                CambiarModo(modo, true);
-            }*/
-        </script>-->
     </body>
 </html>
