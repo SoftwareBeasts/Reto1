@@ -39,6 +39,8 @@ function volverOrigen(){
   },1000);
   }
 }
+/*Esta funcion envia una señal a true, y despues de un segundo la vuelve false
+cambia la variable RESET*/
 function RESET(){
   if (comprobarUso()) {
     $($.ajax({
