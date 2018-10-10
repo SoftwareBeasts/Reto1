@@ -15,7 +15,8 @@ body {
 #grafico {
     width: 500px;
     height: 150px;
-    border: 1px solid #d3d3d3; display: block;
+    border: 1px solid #d3d3d3;
+    display: block;
 }
 
 #velocidadMedia {
@@ -27,6 +28,10 @@ body {
 #tiempoTotal {
     margin-bottom: 30px;
     display: block;
+}
+
+#esquemaEstadisticas {
+    display: none;
 }
 
 #esquemaEstadisticas ul {
@@ -49,6 +54,6 @@ body {
     }
 
     #grafico {
-        width:100%;
+        width: 100%;
     }
 }

@@ -2,7 +2,13 @@
 var arrayVelocidad = [];
 var contador = 0;
 var contador2 = 0;
+var currentPos = 0;
+var posicionPrev1 = false;
+var posicionPrev2 = false;
+var posicionPrev3 = false;
+var posicionPrev4 = false;
 var botonLoadOrigen = false;
+var ModoCambiado = false;
 var tiempo = 0;
 var posicion = 0;
 var posicionPrev = document.getElementById("esquema").className;
@@ -32,6 +38,7 @@ function leerVarPos() {
 
 /*Mantiene la selección del modo en el nav y guarda el modo en el que se queda*/
 function CambiarModo(modo) {
+    ModoCambiado = true;
     if (comprobarUso()){
         localStorage.setItem("Modo", modo);
         var modos = document.getElementsByClassName("boton efectoclick");
@@ -50,7 +57,7 @@ function CambiarModo(modo) {
 
 /*Guarda datos necesarios para estadisticas*/
 function GuardarDatos() {
-    if (comprobarUso()){
+    if (comprobarUso() && ModoCambiado == true){
         var modo = localStorage.getItem("Modo");
         if (modo == "auto") {
             localStorage.setItem("ModoEstadisticas", "Automático");
@@ -72,27 +79,11 @@ function GuardarDatos() {
 /*Este intervalo recoge cada 0.5 segundos la posición y la velocidad actuales, también sirve para la animación*/
 setInterval(function(){
     $.get("./leerVar/leer_posicion.html",function(currentPosition){
+        currentPos = (currentPosition).toString();
         document.getElementById("posData").textContent = (currentPosition/100).toString();
         let margen = Math.round(((33.5/9000)*currentPosition)+29);
         console.log(margen.toString());
         document.getElementById("esquema").style.marginLeft = margen+"%";
-        /*$("#posData").text(position).toString();*/
-        /*if(pos >= 30){
-            if(pos >= 60){
-                if(pos === 90){
-                    esquema.className = "pos3";
-                }
-                else{
-                    esquema.className = "pos2";
-                }
-            }
-            else{
-                esquema.className = "pos1";
-            }
-        }
-        else{
-            esquema.className = "none";
-        }*/
     });
     $.get("./leerVar/leer_velocidad.html",function(currentSpeed){
         $("#velData").text(currentSpeed).toString();
@@ -106,23 +97,22 @@ setInterval(function(){
     }
 
     /*Guarda cada posicion por la que pasa la maquina*/
-    posicion = document.getElementById("esquema").className;
-    if (posicion != posicionPrev && posicionPrev == "none"){
-        let temp = localStorage.getItem("Posicion 0");
+    if (currentPos < localStorage.getItem("position_1") && posicionPrev1 == false){
+        let temp = localStorage.getItem("pos0");
         localStorage.setItem("pos0", 1 + temp);
-        posicionPrev = posicion;
-    } else if (posicion != posicionPrev && posicionPrev == "pos1"){
-        let temp = localStorage.getItem("Posicion 1");
+        posicionPrev1 = true;
+    } else if (currentPos >= localStorage.getItem("position_2") && currentPos < localStorage.getItem("position_3") && posicionPrev2 == false){
+        let temp = localStorage.getItem("pos1");
         localStorage.setItem("pos1", 1 + temp);
-        posicionPrev = posicion;
-    } else if (posicion != posicionPrev && posicionPrev == "pos2"){
-        let temp = localStorage.getItem("Posicion 2");
+        posicionPrev2 = true;
+    } else if (currentPos >= localStorage.getItem("position_3") && currentPos < localStorage.getItem("position_4") && posicionPrev3 == false){
+        let temp = localStorage.getItem("pos2");
         localStorage.setItem("pos2", 1 + temp);
-        posicionPrev = posicion;
-    } else if (posicion != posicionPrev && posicionPrev == "pos3"){
-        let temp = localStorage.getItem("Posicion 3");
+        posicionPrev3 = true;
+    } else if (currentPos < localStorage.getItem("position_4") && posicionPrev4 == false){
+        let temp = localStorage.getItem("pos3");
         localStorage.setItem("pos3", 1 + temp);
-        posicionPrev = posicion;
+        posicionPrev4 = true;
     }
     /*Quita la animacion del boton origen tras 3 segundos*/
     if (contador2 == 6 && botonLoadOrigen == true) {
