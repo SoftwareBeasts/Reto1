@@ -65,7 +65,7 @@ function GuardarDatos() {
             localStorage.setItem("ModoEstadisticas", "Manual");
             localStorage.setItem("Velocidad manual", arrayVelocidad);
             localStorage.setItem("Tiempo total manual", tiempo);
-        } else if (modo == "cotas") {
+        } else {
             localStorage.setItem("ModoEstadisticas", "Por cotas");
             localStorage.setItem("Velocidad cotas", arrayVelocidad);
             localStorage.setItem("Tiempo total cotas", tiempo);

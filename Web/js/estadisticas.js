@@ -67,7 +67,7 @@ if (localStorage.getItem("Modo") == "auto") {
         ctx.lineTo(i * reparto, (150 - transform));
     }
     ctx.stroke();
-} else if (localStorage.getItem("Modo") == "cotas") {
+} else {
     /*Velocidad media*/
     var velMedia = 0;
     var arrayVel = localStorage.getItem("Velocidad cotas").split(",");
