@@ -23,6 +23,7 @@ Documentación general del proyecto [aquí](/Documentación/Documentacion.pdf)
 | Reunión con el equipo de ARI [documento](/Documentaci%C3%B3n/Reuni%C3%B3n%20con%20ARI.pdf) |
 | Plataforma de planificación que hemos usado de una forma diaria <a href="https://trello.com/b/96znWmkJ/" target="_blank">link a Trello</a>|
 | Version 0.0 de Sketch [imagen](/Documentaci%C3%B3n/Sketch%20v0.0.jpg) |
+| Github pages [link](https://softwarebeasts.github.io/) |
 
 
 ###### Realizado por Software Beasts bajo licencia [MIT](/LICENSE). 2018.
