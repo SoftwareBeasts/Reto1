@@ -1,7 +1,7 @@
 document.getElementById("modoH3").innerHTML = "Modo: " + localStorage.getItem("ModoEstadisticas");
 
 /*Calcula individualmente las estadisticas para cada modo*/
-if(localStorage.getItem("Modo") == "auto"){
+if (localStorage.getItem("Modo") == "auto") {
     /*Velocidad media*/
     var velMedia = 0;
     var arrayVel = localStorage.getItem("Velocidad auto").split(",");
@@ -21,19 +21,19 @@ if(localStorage.getItem("Modo") == "auto"){
     /*Dibuja del grafico*/
     var arrayMax = 0;
     for (let i = 0; i < arrayVel.length; i++) {
-        if (arrayMax < arrayVel[i]){
+        if (arrayMax < arrayVel[i]) {
             arrayMax = arrayVel[i];
         }
     }
     var tiempototal = localStorage.getItem("Tiempo total auto");
-    var reparto = 500 / arrayVel.length;
+    var reparto = 500 / (arrayVel.length + 1);
     var c = document.getElementById("grafico");
     var ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.moveTo(0, 150);
     for (let i = 0; i < arrayVel.length; i++) {
         let transform = arrayVel[i] / arrayMax * 150;
-        ctx.lineTo(i * reparto , (150 - transform));
+        ctx.lineTo(i * reparto, (150 - transform));
     }
     ctx.stroke();
 } else if (localStorage.getItem("Modo") == "manual") {
@@ -52,7 +52,7 @@ if(localStorage.getItem("Modo") == "auto"){
     /*Dibuja del grafico*/
     var arrayMax = 0;
     for (let i = 0; i < arrayVel.length; i++) {
-        if (arrayMax < arrayVel[i]){
+        if (arrayMax < arrayVel[i]) {
             arrayMax = arrayVel[i];
         }
     }
@@ -64,10 +64,10 @@ if(localStorage.getItem("Modo") == "auto"){
     ctx.moveTo(0, 150);
     for (let i = 0; i < arrayVel.length; i++) {
         let transform = arrayVel[i] / arrayMax * 150;
-        ctx.lineTo(i * reparto , (150 - transform));
+        ctx.lineTo(i * reparto, (150 - transform));
     }
     ctx.stroke();
-} else if (localStorage.getItem("Modo") == "cotas"){
+} else if (localStorage.getItem("Modo") == "cotas") {
     /*Velocidad media*/
     var velMedia = 0;
     var arrayVel = localStorage.getItem("Velocidad cotas").split(",");
@@ -83,7 +83,7 @@ if(localStorage.getItem("Modo") == "auto"){
     /*Dibuja del grafico*/
     var arrayMax = 0;
     for (let i = 0; i < arrayVel.length; i++) {
-        if (arrayMax < arrayVel[i]){
+        if (arrayMax < arrayVel[i]) {
             arrayMax = arrayVel[i];
         }
     }
@@ -95,7 +95,7 @@ if(localStorage.getItem("Modo") == "auto"){
     ctx.moveTo(0, 150);
     for (let i = 0; i < arrayVel.length; i++) {
         let transform = arrayVel[i] / arrayMax * 150;
-        ctx.lineTo(i * reparto , (150 - transform));
+        ctx.lineTo(i * reparto, (150 - transform));
     }
     ctx.stroke();
 }
