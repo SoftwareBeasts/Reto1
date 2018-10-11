@@ -81,7 +81,7 @@ setInterval(function(){
     $.get("./leerVar/leer_posicion.html",function(currentPosition){
         currentPos = (currentPosition).toString();
         document.getElementById("posData").textContent = (currentPosition/100).toString();
-        let margen = Math.round(((33.5/9000)*currentPosition)+29);
+        let margen = Math.round(((33.5/50000)*currentPosition)+29);
         console.log(margen.toString());
         document.getElementById("esquema").style.marginLeft = margen+"%";
     });
@@ -114,6 +114,7 @@ setInterval(function(){
         localStorage.setItem("pos3", 1 + temp);
         posicionPrev4 = true;
     }
+
     /*Quita la animacion del boton origen tras 3 segundos*/
     if (contador2 == 6 && botonLoadOrigen == true) {
         var origenActivado = document.getElementById("gif");
